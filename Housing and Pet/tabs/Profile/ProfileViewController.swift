@@ -139,7 +139,7 @@ class ProfileViewController: UIViewController{
         getHelpButton.setTitleColor(UIColor(red: 0.07, green: 0.07, blue: 0.07, alpha: 1.0), for: .normal)
         getHelpButton.configuration = getHelpConf
         getHelpButton.translatesAutoresizingMaskIntoConstraints = false
-        getHelpButton.addTarget(self, action: #selector(test), for: .touchUpInside)
+        getHelpButton.addTarget(self, action: #selector(AI), for: .touchUpInside)
         view.insertSubview(getHelpButton, at: 1)
 
         
@@ -274,13 +274,16 @@ class ProfileViewController: UIViewController{
     @objc private func personalInfoPush(){
         navigationController?.pushViewController(ViewProfileViewController(), animated: true)
     }
+    @objc private func AI(){
+        navigationController?.pushViewController(GPTViewController(), animated: true)
+    }
     
     private func setUpCons(){
         NSLayoutConstraint.activate([
             
-            //testLabel
+//            testLabel
             testLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            testLabel.topAnchor.constraint(equalTo: profileLabel.topAnchor,constant: -20),
+            testLabel.topAnchor.constraint(equalTo: view.topAnchor,constant: -20),
             
             //set up email conf circle
             passwordSetupPageCircle.topAnchor.constraint(equalTo: view.topAnchor,constant: -122),

@@ -73,6 +73,13 @@
 		31EA70142A0577D30035A2D0 /* AdoptionPet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EA70132A0577D30035A2D0 /* AdoptionPet.swift */; };
 		31EA70162A0578150035A2D0 /* CustomMailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EA70152A0578150035A2D0 /* CustomMailCollectionViewCell.swift */; };
 		31EA70182A0578350035A2D0 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EA70172A0578350035A2D0 /* Person.swift */; };
+		31EA701A2A05BEBA0035A2D0 /* AIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EA70192A05BEBA0035A2D0 /* AIViewController.swift */; };
+		31EA701D2A05BFDE0035A2D0 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 31EA701C2A05BFDE0035A2D0 /* OpenAISwift */; };
+		31EA701F2A05C0B70035A2D0 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EA701E2A05C0B70035A2D0 /* APIService.swift */; };
+		31EA70212A05CBD70035A2D0 /* GPTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EA70202A05CBD70035A2D0 /* GPTViewController.swift */; };
+		31EA70232A05CF620035A2D0 /* DallEResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EA70222A05CF620035A2D0 /* DallEResponse.swift */; };
+		31EA70252A05CFAE0035A2D0 /* GPTResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EA70242A05CFAE0035A2D0 /* GPTResponse.swift */; };
+		31EA70272A05E1B00035A2D0 /* ChatgptTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EA70262A05E1B00035A2D0 /* ChatgptTableViewCell.swift */; };
 		92381A269A78FF093E2B7DCE /* Pods_Housing_and_Pet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D89A4B621F566CC3C94100F5 /* Pods_Housing_and_Pet.framework */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +152,12 @@
 		31EA70132A0577D30035A2D0 /* AdoptionPet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptionPet.swift; sourceTree = "<group>"; };
 		31EA70152A0578150035A2D0 /* CustomMailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMailCollectionViewCell.swift; sourceTree = "<group>"; };
 		31EA70172A0578350035A2D0 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		31EA70192A05BEBA0035A2D0 /* AIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIViewController.swift; sourceTree = "<group>"; };
+		31EA701E2A05C0B70035A2D0 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		31EA70202A05CBD70035A2D0 /* GPTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTViewController.swift; sourceTree = "<group>"; };
+		31EA70222A05CF620035A2D0 /* DallEResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DallEResponse.swift; sourceTree = "<group>"; };
+		31EA70242A05CFAE0035A2D0 /* GPTResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTResponse.swift; sourceTree = "<group>"; };
+		31EA70262A05E1B00035A2D0 /* ChatgptTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatgptTableViewCell.swift; sourceTree = "<group>"; };
 		57A2DF2F868BE03D2EBE6E22 /* Pods-Housing and Pet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Housing and Pet.debug.xcconfig"; path = "Target Support Files/Pods-Housing and Pet/Pods-Housing and Pet.debug.xcconfig"; sourceTree = "<group>"; };
 		A68629184D9B33E51CE525AA /* Pods-Housing and Pet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Housing and Pet.release.xcconfig"; path = "Target Support Files/Pods-Housing and Pet/Pods-Housing and Pet.release.xcconfig"; sourceTree = "<group>"; };
 		D89A4B621F566CC3C94100F5 /* Pods_Housing_and_Pet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Housing_and_Pet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31EA701D2A05BFDE0035A2D0 /* OpenAISwift in Frameworks */,
 				92381A269A78FF093E2B7DCE /* Pods_Housing_and_Pet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,6 +280,12 @@
 				3171BBD629FDF64700466453 /* ProfileViewController.swift */,
 				31C3DE942A003460006B7D31 /* EditProfileViewController.swift */,
 				31EA70032A04DFE60035A2D0 /* ViewProfile.swift */,
+				31EA70192A05BEBA0035A2D0 /* AIViewController.swift */,
+				31EA70202A05CBD70035A2D0 /* GPTViewController.swift */,
+				31EA70262A05E1B00035A2D0 /* ChatgptTableViewCell.swift */,
+				31EA701E2A05C0B70035A2D0 /* APIService.swift */,
+				31EA70222A05CF620035A2D0 /* DallEResponse.swift */,
+				31EA70242A05CFAE0035A2D0 /* GPTResponse.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -369,6 +389,9 @@
 			dependencies = (
 			);
 			name = "Housing and Pet";
+			packageProductDependencies = (
+				31EA701C2A05BFDE0035A2D0 /* OpenAISwift */,
+			);
 			productName = "Housing and Pet";
 			productReference = 31719BBF29FDE0C300466453 /* Housing and Pet.app */;
 			productType = "com.apple.product-type.application";
@@ -397,6 +420,9 @@
 				Base,
 			);
 			mainGroup = 31719BB629FDE0C300466453;
+			packageReferences = (
+				31EA701B2A05BFDE0035A2D0 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
 			productRefGroup = 31719BC029FDE0C300466453 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -478,26 +504,31 @@
 			files = (
 				312F1CE32A02F03400E7CA0A /* PostStep6SitterViewController.swift in Sources */,
 				31C3DE8E29FF5897006B7D31 /* Pet.swift in Sources */,
+				31EA70232A05CF620035A2D0 /* DallEResponse.swift in Sources */,
 				3171BBF229FE341000466453 /* Validator.swift in Sources */,
 				312F1CD72A02960600E7CA0A /* PostStep3AdopterViewController.swift in Sources */,
 				31C3DE9229FF58F4006B7D31 /* PetCollectionViewCell.swift in Sources */,
 				312F1CDF2A02E24200E7CA0A /* PostStep5AdopterViewController.swift in Sources */,
 				3171BBD929FDF65500466453 /* PostViewController.swift in Sources */,
 				31719BD929FDE20100466453 /* SignInViewController.swift in Sources */,
+				31EA701F2A05C0B70035A2D0 /* APIService.swift in Sources */,
 				3171BBE629FDFF6100466453 /* LoginUserRequest.swift in Sources */,
 				31EA70062A0576260035A2D0 /* SearchViewController.swift in Sources */,
 				31C3DE972A00AF20006B7D31 /* WelcomeViewController.swift in Sources */,
 				31C3DE9029FF58D3006B7D31 /* CustomFilterCollectionViewCell.swift in Sources */,
 				31C3DE8729FE45D1006B7D31 /* EmailVerificationViewController.swift in Sources */,
+				31EA70272A05E1B00035A2D0 /* ChatgptTableViewCell.swift in Sources */,
 				31C3DE952A003460006B7D31 /* EditProfileViewController.swift in Sources */,
 				3171BBF029FE287800466453 /* CheckEmailViewController.swift in Sources */,
 				31EA70042A04DFE60035A2D0 /* ViewProfile.swift in Sources */,
 				3171BBD529FDF64400466453 /* MailViewController.swift in Sources */,
 				312F1CD12A022F8700E7CA0A /* PostStep2SitterViewController.swift in Sources */,
 				31EA6FFD2A0393290035A2D0 /* EmailCodeViewController.swift in Sources */,
+				31EA70212A05CBD70035A2D0 /* GPTViewController.swift in Sources */,
 				312F1CD92A02961400E7CA0A /* PostStep3SitterViewController.swift in Sources */,
 				31EA70182A0578350035A2D0 /* Person.swift in Sources */,
 				31EA70002A0456810035A2D0 /* NetworkManager.swift in Sources */,
+				31EA701A2A05BEBA0035A2D0 /* AIViewController.swift in Sources */,
 				3171BBDB29FDF65800466453 /* SavedViewController.swift in Sources */,
 				31EA70162A0578150035A2D0 /* CustomMailCollectionViewCell.swift in Sources */,
 				31C3DE8B29FEEF77006B7D31 /* User.swift in Sources */,
@@ -518,6 +549,7 @@
 				3171BBE029FDF6D600466453 /* RegisterUserReq.swift in Sources */,
 				312F1CE12A02E24E00E7CA0A /* PostStep5SitterViewController.swift in Sources */,
 				31EA700E2A0577200035A2D0 /* ViewProfileViewController.swift in Sources */,
+				31EA70252A05CFAE0035A2D0 /* GPTResponse.swift in Sources */,
 				3171BBE829FE10D600466453 /* AlertManager.swift in Sources */,
 				312F1CD32A022F9C00E7CA0A /* PostStep2AdopterViewController.swift in Sources */,
 				31C3DE8929FEDA36006B7D31 /* PasswordSetupViewController.swift in Sources */,
@@ -748,6 +780,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		31EA701B2A05BFDE0035A2D0 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		31EA701C2A05BFDE0035A2D0 /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 31EA701B2A05BFDE0035A2D0 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 31719BB729FDE0C300466453 /* Project object */;
 }

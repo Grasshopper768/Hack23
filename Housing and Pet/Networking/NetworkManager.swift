@@ -19,7 +19,49 @@ class NetworkManager {
     var urlUpdateUser = URL(string: "http://34.85.147.40/user")
     var getUserbyToken = URL(string: "http://34.85.147.40/user")
     var userImgUrl = URL(string: "http://34.85.147.40/upload/user/")
+    var petAdopterReqUrl = URL(string: "http://34.85.147.40/user/pet_adoption_request/")
     
+    func petSitPost(token:String,name:String,age:String,gender:String,breed:String,category:String,on_campus:Bool,off_campus:Bool,outside:Bool,start_time:String,end_time:String,addtional_info:String,pet_description:String,food_supplies:String,adopter_reward:Bool,completion:@escaping(petAdopReq) -> Void){
+        var request = URLRequest(url: petAdopterReqUrl!)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        
+        let body: [String:Any] = [
+                "name": name,
+                "age": age,
+                "gender": gender,
+                "breed": breed,
+                "category": category,
+                "on_campus": on_campus,
+                "off_campus": off_campus,
+                "outside": outside,
+                "start_time": start_time,
+                "end_time": end_time,
+                "additional_info": addtional_info,
+                "pet_description":  pet_description,
+                "food_supplies": food_supplies,
+                "adopter_reward": adopter_reward
+        ]
+        
+        request.httpBody = try? JSONSerialization.data(withJSONObject: body,options: .fragmentsAllowed)
+        let sitReq = URLSession.shared.dataTask(with: request) { data, response, error in
+            if let data = data{
+                do{
+                    let decoder = JSONDecoder()
+                    let response = try decoder.decode(petAdopReq.self, from: data)
+                    print("pet req good")
+                    completion(response)
+                }
+                catch (let error){
+                    print(error)
+                    print(error.localizedDescription)
+                }
+            }
+        }
+        sitReq.resume()
+        
+    }
     
         func createUserImage(token:String,image_data:String,compeltion:@escaping(assett) -> Void){
             var request = URLRequest(url: userImgUrl!)

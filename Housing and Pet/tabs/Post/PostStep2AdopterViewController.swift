@@ -11,23 +11,23 @@ class PostStep2AdopterViewController: UIViewController {
     
     let step2Label = UILabel()
     let nameLabel = UILabel()
-    let nameField = UITextField()
+    static let nameField = UITextField()
     let ageLabel = UILabel()
-    let ageField = UITextField()
+    static let ageField = UITextField()
     let yearsOldLabel = UILabel()
     let genderLabel = UILabel()
-    let genderField = UITextField()
+    static let genderField = UITextField()
     let categoryLabel = UILabel()
-    let categoryField = UITextField()
+    static let categoryField = UITextField()
     let breedLabel = UILabel()
-    let breedField = UITextField()
+    static let breedField = UITextField()
     let currentLocation = UILabel()
-    let onCampusButton = UIButton()
-    let offCampusButton = UIButton()
-    let outsideIthacaButton = UIButton()
+    static let onCampusButton = UIButton()
+    static let offCampusButton = UIButton()
+    static let outsideIthacaButton = UIButton()
     let duratonLabel = UILabel()
-    let durationStartField = UITextField()
-    let durationEndField = UITextField()
+    static let durationStartField = UITextField()
+    static let durationEndField = UITextField()
     let toLabel = UILabel()
     let bottomLine = UIImageView()
     let cancelButton = UIButton()
@@ -36,12 +36,12 @@ class PostStep2AdopterViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        onCampusButton.setTitleColor(UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1), for: .normal)
-        onCampusButton.backgroundColor = .white
-        offCampusButton.setTitleColor(UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1), for: .normal)
-        offCampusButton.backgroundColor = .white
-        outsideIthacaButton.setTitleColor(UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1), for: .normal)
-        outsideIthacaButton.backgroundColor = .white
+        PostStep2AdopterViewController.onCampusButton.setTitleColor(UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1), for: .normal)
+        PostStep2AdopterViewController.onCampusButton.backgroundColor = .white
+        PostStep2AdopterViewController.offCampusButton.setTitleColor(UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1), for: .normal)
+        PostStep2AdopterViewController.offCampusButton.backgroundColor = .white
+        PostStep2AdopterViewController.outsideIthacaButton.setTitleColor(UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1), for: .normal)
+        PostStep2AdopterViewController.outsideIthacaButton.backgroundColor = .white
         
     }
     
@@ -100,20 +100,20 @@ class PostStep2AdopterViewController: UIViewController {
             .foregroundColor: UIColor(red: 0.48, green: 0.49, blue: 0.53, alpha: 1),
         ]
         let nameFieldAttributedTitle = NSAttributedString(string: nameFieldPlaceHolderText, attributes: nameFieldTextAttributes)
-        nameField.translatesAutoresizingMaskIntoConstraints = false
-        nameField.attributedPlaceholder = nameFieldAttributedTitle
-        nameField.delegate = self
-        nameField.textColor = UIColor(red: 0.07, green: 0.07, blue: 0.07, alpha: 1.0)
-        nameField.autocapitalizationType = .none
-        nameField.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-        nameField.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
-        nameField.autocorrectionType = .no
-        nameField.layer.borderWidth = 2
-        nameField.font = UIFont(name: "Ubuntu-Regular", size: 12)
-        nameField.clipsToBounds = true
-        nameField.layer.cornerRadius = 15
-        nameField.textAlignment = .center
-        view.insertSubview(nameField, at: 0)
+        PostStep2AdopterViewController.nameField.translatesAutoresizingMaskIntoConstraints = false
+        PostStep2AdopterViewController.nameField.attributedPlaceholder = nameFieldAttributedTitle
+        PostStep2AdopterViewController.nameField.delegate = self
+        PostStep2AdopterViewController.nameField.textColor = UIColor(red: 0.07, green: 0.07, blue: 0.07, alpha: 1.0)
+        PostStep2AdopterViewController.nameField.autocapitalizationType = .none
+        PostStep2AdopterViewController.nameField.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        PostStep2AdopterViewController.nameField.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        PostStep2AdopterViewController.nameField.autocorrectionType = .no
+        PostStep2AdopterViewController.nameField.layer.borderWidth = 2
+        PostStep2AdopterViewController.nameField.font = UIFont(name: "Ubuntu-Regular", size: 12)
+        PostStep2AdopterViewController.nameField.clipsToBounds = true
+        PostStep2AdopterViewController.nameField.layer.cornerRadius = 15
+        PostStep2AdopterViewController.nameField.textAlignment = .center
+        view.insertSubview(PostStep2AdopterViewController.nameField, at: 0)
         
         //age label
         ageLabel.font = UIFont(name: "Ubuntu-Regular", size: 14)
@@ -129,21 +129,21 @@ class PostStep2AdopterViewController: UIViewController {
             .foregroundColor: UIColor(red: 0.48, green: 0.49, blue: 0.53, alpha: 1),
         ]
         let ageFieldAttributedTitle = NSAttributedString(string: ageFieldPlaceHolderText, attributes: ageFieldTextAttributes)
-        ageField.translatesAutoresizingMaskIntoConstraints = false
-        ageField.attributedPlaceholder = ageFieldAttributedTitle
-        ageField.delegate = self
-        ageField.textColor = UIColor(red: 0.07, green: 0.07, blue: 0.07, alpha: 1.0)
-        ageField.autocapitalizationType = .none
-        ageField.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-        ageField.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
-        ageField.autocorrectionType = .no
-        ageField.layer.borderWidth = 2
-        ageField.keyboardType = .asciiCapableNumberPad
-        ageField.font = UIFont(name: "Ubuntu-Regular", size: 12)
-        ageField.clipsToBounds = true
-        ageField.layer.cornerRadius = 15
-        ageField.textAlignment = .center
-        view.insertSubview(ageField, at: 0)
+        PostStep2AdopterViewController.ageField.translatesAutoresizingMaskIntoConstraints = false
+        PostStep2AdopterViewController.ageField.attributedPlaceholder = ageFieldAttributedTitle
+        PostStep2AdopterViewController.ageField.delegate = self
+        PostStep2AdopterViewController.ageField.textColor = UIColor(red: 0.07, green: 0.07, blue: 0.07, alpha: 1.0)
+        PostStep2AdopterViewController.ageField.autocapitalizationType = .none
+        PostStep2AdopterViewController.ageField.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        PostStep2AdopterViewController.ageField.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        PostStep2AdopterViewController.ageField.autocorrectionType = .no
+        PostStep2AdopterViewController.ageField.layer.borderWidth = 2
+        PostStep2AdopterViewController.ageField.keyboardType = .asciiCapableNumberPad
+        PostStep2AdopterViewController.ageField.font = UIFont(name: "Ubuntu-Regular", size: 12)
+        PostStep2AdopterViewController.ageField.clipsToBounds = true
+        PostStep2AdopterViewController.ageField.layer.cornerRadius = 15
+        PostStep2AdopterViewController.ageField.textAlignment = .center
+        view.insertSubview(PostStep2AdopterViewController.ageField, at: 0)
         
         //years label
         yearsOldLabel.font = UIFont(name: "Ubuntu-Regular", size: 14)
@@ -166,20 +166,20 @@ class PostStep2AdopterViewController: UIViewController {
             .foregroundColor: UIColor(red: 0.48, green: 0.49, blue: 0.53, alpha: 1),
         ]
         let genderFieldAttributedTitle = NSAttributedString(string: genderFieldPlaceHolderText, attributes: genderFieldTextAttributes)
-        genderField.translatesAutoresizingMaskIntoConstraints = false
-        genderField.attributedPlaceholder = genderFieldAttributedTitle
-        genderField.delegate = self
-        genderField.textColor = UIColor(red: 0.07, green: 0.07, blue: 0.07, alpha: 1.0)
-        genderField.autocapitalizationType = .none
-        genderField.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-        genderField.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
-        genderField.autocorrectionType = .no
-        genderField.layer.borderWidth = 2
-        genderField.font = UIFont(name: "Ubuntu-Regular", size: 12)
-        genderField.clipsToBounds = true
-        genderField.layer.cornerRadius = 15
-        genderField.textAlignment = .center
-        view.insertSubview(genderField, at: 0)
+        PostStep2AdopterViewController.genderField.translatesAutoresizingMaskIntoConstraints = false
+        PostStep2AdopterViewController.genderField.attributedPlaceholder = genderFieldAttributedTitle
+        PostStep2AdopterViewController.genderField.delegate = self
+        PostStep2AdopterViewController.genderField.textColor = UIColor(red: 0.07, green: 0.07, blue: 0.07, alpha: 1.0)
+        PostStep2AdopterViewController.genderField.autocapitalizationType = .none
+        PostStep2AdopterViewController.genderField.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        PostStep2AdopterViewController.genderField.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        PostStep2AdopterViewController.genderField.autocorrectionType = .no
+        PostStep2AdopterViewController.genderField.layer.borderWidth = 2
+        PostStep2AdopterViewController.genderField.font = UIFont(name: "Ubuntu-Regular", size: 12)
+        PostStep2AdopterViewController.genderField.clipsToBounds = true
+        PostStep2AdopterViewController.genderField.layer.cornerRadius = 15
+        PostStep2AdopterViewController.genderField.textAlignment = .center
+        view.insertSubview(PostStep2AdopterViewController.genderField, at: 0)
         
         //category label
         categoryLabel.font = UIFont(name: "Ubuntu-Regular", size: 14)
@@ -195,20 +195,20 @@ class PostStep2AdopterViewController: UIViewController {
             .foregroundColor: UIColor(red: 0.48, green: 0.49, blue: 0.53, alpha: 1),
         ]
         let categoryFieldAttributedTitle = NSAttributedString(string: categoryFieldPlaceHolderText, attributes: categoryFieldTextAttributes)
-        categoryField.translatesAutoresizingMaskIntoConstraints = false
-        categoryField.attributedPlaceholder = categoryFieldAttributedTitle
-        categoryField.delegate = self
-        categoryField.textColor = UIColor(red: 0.07, green: 0.07, blue: 0.07, alpha: 1.0)
-        categoryField.autocapitalizationType = .none
-        categoryField.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-        categoryField.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
-        categoryField.autocorrectionType = .no
-        categoryField.layer.borderWidth = 2
-        categoryField.font = UIFont(name: "Ubuntu-Regular", size: 12)
-        categoryField.clipsToBounds = true
-        categoryField.layer.cornerRadius = 15
-        categoryField.textAlignment = .center
-        view.insertSubview(categoryField, at: 0)
+        PostStep2AdopterViewController.categoryField.translatesAutoresizingMaskIntoConstraints = false
+        PostStep2AdopterViewController.categoryField.attributedPlaceholder = categoryFieldAttributedTitle
+        PostStep2AdopterViewController.categoryField.delegate = self
+        PostStep2AdopterViewController.categoryField.textColor = UIColor(red: 0.07, green: 0.07, blue: 0.07, alpha: 1.0)
+        PostStep2AdopterViewController.categoryField.autocapitalizationType = .none
+        PostStep2AdopterViewController.categoryField.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        PostStep2AdopterViewController.categoryField.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        PostStep2AdopterViewController.categoryField.autocorrectionType = .no
+        PostStep2AdopterViewController.categoryField.layer.borderWidth = 2
+        PostStep2AdopterViewController.categoryField.font = UIFont(name: "Ubuntu-Regular", size: 12)
+        PostStep2AdopterViewController.categoryField.clipsToBounds = true
+        PostStep2AdopterViewController.categoryField.layer.cornerRadius = 15
+        PostStep2AdopterViewController.categoryField.textAlignment = .center
+        view.insertSubview(PostStep2AdopterViewController.categoryField, at: 0)
         
         //breed label
         breedLabel.font = UIFont(name: "Ubuntu-Regular", size: 14)
@@ -224,20 +224,20 @@ class PostStep2AdopterViewController: UIViewController {
             .foregroundColor: UIColor(red: 0.48, green: 0.49, blue: 0.53, alpha: 1),
         ]
         let breedFieldAttributedTitle = NSAttributedString(string: breedFieldPlaceHolderText, attributes: breedFieldTextAttributes)
-        breedField.translatesAutoresizingMaskIntoConstraints = false
-        breedField.attributedPlaceholder = breedFieldAttributedTitle
-        breedField.delegate = self
-        breedField.textColor = UIColor(red: 0.07, green: 0.07, blue: 0.07, alpha: 1.0)
-        breedField.autocapitalizationType = .none
-        breedField.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-        breedField.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
-        breedField.autocorrectionType = .no
-        breedField.layer.borderWidth = 2
-        breedField.font = UIFont(name: "Ubuntu-Regular", size: 12)
-        breedField.clipsToBounds = true
-        breedField.layer.cornerRadius = 15
-        breedField.textAlignment = .center
-        view.insertSubview(breedField, at: 0)
+        PostStep2AdopterViewController.breedField.translatesAutoresizingMaskIntoConstraints = false
+        PostStep2AdopterViewController.breedField.attributedPlaceholder = breedFieldAttributedTitle
+        PostStep2AdopterViewController.breedField.delegate = self
+        PostStep2AdopterViewController.breedField.textColor = UIColor(red: 0.07, green: 0.07, blue: 0.07, alpha: 1.0)
+        PostStep2AdopterViewController.breedField.autocapitalizationType = .none
+        PostStep2AdopterViewController.breedField.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        PostStep2AdopterViewController.breedField.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        PostStep2AdopterViewController.breedField.autocorrectionType = .no
+        PostStep2AdopterViewController.breedField.layer.borderWidth = 2
+        PostStep2AdopterViewController.breedField.font = UIFont(name: "Ubuntu-Regular", size: 12)
+        PostStep2AdopterViewController.breedField.clipsToBounds = true
+        PostStep2AdopterViewController.breedField.layer.cornerRadius = 15
+        PostStep2AdopterViewController.breedField.textAlignment = .center
+        view.insertSubview(PostStep2AdopterViewController.breedField, at: 0)
         
         //current location
         currentLocation.text = "Current Location"
@@ -247,43 +247,43 @@ class PostStep2AdopterViewController: UIViewController {
         view.insertSubview(currentLocation, at: 0)
         
         //on campus button
-        onCampusButton.setTitle("On-Campus", for: .normal)
-        onCampusButton.titleLabel?.font = UIFont(name: "Ubuntu-Regular", size: 12)
-        onCampusButton.setTitleColor(UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1), for: .normal)
-        onCampusButton.translatesAutoresizingMaskIntoConstraints = false
-        onCampusButton.clipsToBounds = true
-        onCampusButton.addTarget(self, action: #selector(onCampusClick), for: .touchUpInside)
-        onCampusButton.layer.cornerRadius = 15
-        onCampusButton.backgroundColor = .white
-        onCampusButton.layer.borderColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1).cgColor
-        onCampusButton.layer.borderWidth = 2
-        view.insertSubview(onCampusButton, at: 0)
+        PostStep2AdopterViewController.onCampusButton.setTitle("On-Campus", for: .normal)
+        PostStep2AdopterViewController.onCampusButton.titleLabel?.font = UIFont(name: "Ubuntu-Regular", size: 12)
+        PostStep2AdopterViewController.onCampusButton.setTitleColor(UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1), for: .normal)
+        PostStep2AdopterViewController.onCampusButton.translatesAutoresizingMaskIntoConstraints = false
+        PostStep2AdopterViewController.onCampusButton.clipsToBounds = true
+        PostStep2AdopterViewController.onCampusButton.addTarget(self, action: #selector(onCampusClick), for: .touchUpInside)
+        PostStep2AdopterViewController.onCampusButton.layer.cornerRadius = 15
+        PostStep2AdopterViewController.onCampusButton.backgroundColor = .white
+        PostStep2AdopterViewController.onCampusButton.layer.borderColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1).cgColor
+        PostStep2AdopterViewController.onCampusButton.layer.borderWidth = 2
+        view.insertSubview(PostStep2AdopterViewController.onCampusButton, at: 0)
         
         //off campus button
-        offCampusButton.setTitle("Off-Campus | Ithaca", for: .normal)
-        offCampusButton.titleLabel?.font = UIFont(name: "Ubuntu-Regular", size: 12)
-        offCampusButton.setTitleColor(UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1), for: .normal)
-        offCampusButton.translatesAutoresizingMaskIntoConstraints = false
-        offCampusButton.clipsToBounds = true
-        offCampusButton.addTarget(self, action: #selector(offCampusClick), for: .touchUpInside)
-        offCampusButton.layer.cornerRadius = 15
-        offCampusButton.backgroundColor = .white
-        offCampusButton.layer.borderColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1).cgColor
-        offCampusButton.layer.borderWidth = 2
-        view.insertSubview(offCampusButton, at: 0)
+        PostStep2AdopterViewController.offCampusButton.setTitle("Off-Campus | Ithaca", for: .normal)
+        PostStep2AdopterViewController.offCampusButton.titleLabel?.font = UIFont(name: "Ubuntu-Regular", size: 12)
+        PostStep2AdopterViewController.offCampusButton.setTitleColor(UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1), for: .normal)
+        PostStep2AdopterViewController.offCampusButton.translatesAutoresizingMaskIntoConstraints = false
+        PostStep2AdopterViewController.offCampusButton.clipsToBounds = true
+        PostStep2AdopterViewController.offCampusButton.addTarget(self, action: #selector(offCampusClick), for: .touchUpInside)
+        PostStep2AdopterViewController.offCampusButton.layer.cornerRadius = 15
+        PostStep2AdopterViewController.offCampusButton.backgroundColor = .white
+        PostStep2AdopterViewController.offCampusButton.layer.borderColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1).cgColor
+        PostStep2AdopterViewController.offCampusButton.layer.borderWidth = 2
+        view.insertSubview(PostStep2AdopterViewController.offCampusButton, at: 0)
         
         //off ithaca button
-        outsideIthacaButton.setTitle("Outside Ithaca", for: .normal)
-        outsideIthacaButton.titleLabel?.font = UIFont(name: "Ubuntu-Regular", size: 12)
-        outsideIthacaButton.setTitleColor(UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1), for: .normal)
-        outsideIthacaButton.translatesAutoresizingMaskIntoConstraints = false
-        outsideIthacaButton.clipsToBounds = true
-        outsideIthacaButton.addTarget(self, action: #selector(offIthacaClick), for: .touchUpInside)
-        outsideIthacaButton.layer.cornerRadius = 15
-        outsideIthacaButton.backgroundColor = .white
-        outsideIthacaButton.layer.borderColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1).cgColor
-        outsideIthacaButton.layer.borderWidth = 2
-        view.insertSubview(outsideIthacaButton, at: 0)
+        PostStep2AdopterViewController.outsideIthacaButton.setTitle("Outside Ithaca", for: .normal)
+        PostStep2AdopterViewController.outsideIthacaButton.titleLabel?.font = UIFont(name: "Ubuntu-Regular", size: 12)
+        PostStep2AdopterViewController.outsideIthacaButton.setTitleColor(UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1), for: .normal)
+        PostStep2AdopterViewController.outsideIthacaButton.translatesAutoresizingMaskIntoConstraints = false
+        PostStep2AdopterViewController.outsideIthacaButton.clipsToBounds = true
+        PostStep2AdopterViewController.outsideIthacaButton.addTarget(self, action: #selector(offIthacaClick), for: .touchUpInside)
+        PostStep2AdopterViewController.outsideIthacaButton.layer.cornerRadius = 15
+        PostStep2AdopterViewController.outsideIthacaButton.backgroundColor = .white
+        PostStep2AdopterViewController.outsideIthacaButton.layer.borderColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1).cgColor
+        PostStep2AdopterViewController.outsideIthacaButton.layer.borderWidth = 2
+        view.insertSubview(PostStep2AdopterViewController.outsideIthacaButton, at: 0)
         
         //duration label
         duratonLabel.font = UIFont(name: "Ubuntu-Regular", size: 14)
@@ -299,20 +299,20 @@ class PostStep2AdopterViewController: UIViewController {
             .foregroundColor: UIColor(red: 0.48, green: 0.49, blue: 0.53, alpha: 1),
         ]
         let durationStartFieldAttributedTitle = NSAttributedString(string: durationStartFieldPlaceHolderText, attributes: durationStartFieldTextAttributes)
-        durationStartField.translatesAutoresizingMaskIntoConstraints = false
-        durationStartField.attributedPlaceholder = durationStartFieldAttributedTitle
-        durationStartField.delegate = self
-        durationStartField.textColor = UIColor(red: 0.07, green: 0.07, blue: 0.07, alpha: 1.0)
-        durationStartField.autocapitalizationType = .none
-        durationStartField.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-        durationStartField.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
-        durationStartField.autocorrectionType = .no
-        durationStartField.layer.borderWidth = 2
-        durationStartField.font = UIFont(name: "Ubuntu-Regular", size: 12)
-        durationStartField.clipsToBounds = true
-        durationStartField.layer.cornerRadius = 15
-        durationStartField.textAlignment = .center
-        view.insertSubview(durationStartField, at: 0)
+        PostStep2AdopterViewController.durationStartField.translatesAutoresizingMaskIntoConstraints = false
+        PostStep2AdopterViewController.durationStartField.attributedPlaceholder = durationStartFieldAttributedTitle
+        PostStep2AdopterViewController.durationStartField.delegate = self
+        PostStep2AdopterViewController.durationStartField.textColor = UIColor(red: 0.07, green: 0.07, blue: 0.07, alpha: 1.0)
+        PostStep2AdopterViewController.durationStartField.autocapitalizationType = .none
+        PostStep2AdopterViewController.durationStartField.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        PostStep2AdopterViewController.durationStartField.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        PostStep2AdopterViewController.durationStartField.autocorrectionType = .no
+        PostStep2AdopterViewController.durationStartField.layer.borderWidth = 2
+        PostStep2AdopterViewController.durationStartField.font = UIFont(name: "Ubuntu-Regular", size: 12)
+        PostStep2AdopterViewController.durationStartField.clipsToBounds = true
+        PostStep2AdopterViewController.durationStartField.layer.cornerRadius = 15
+        PostStep2AdopterViewController.durationStartField.textAlignment = .center
+        view.insertSubview(PostStep2AdopterViewController.durationStartField, at: 0)
         
         //duration end field
         let durationEndFieldPlaceHolderText = "##/####"
@@ -321,20 +321,20 @@ class PostStep2AdopterViewController: UIViewController {
             .foregroundColor: UIColor(red: 0.48, green: 0.49, blue: 0.53, alpha: 1),
         ]
         let durationEndFieldAttributedTitle = NSAttributedString(string: durationEndFieldPlaceHolderText, attributes: durationEndFieldTextAttributes)
-        durationEndField.translatesAutoresizingMaskIntoConstraints = false
-        durationEndField.attributedPlaceholder = durationEndFieldAttributedTitle
-        durationEndField.delegate = self
-        durationEndField.textColor = UIColor(red: 0.07, green: 0.07, blue: 0.07, alpha: 1.0)
-        durationEndField.autocapitalizationType = .none
-        durationEndField.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-        durationEndField.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
-        durationEndField.autocorrectionType = .no
-        durationEndField.layer.borderWidth = 2
-        durationEndField.font = UIFont(name: "Ubuntu-Regular", size: 12)
-        durationEndField.clipsToBounds = true
-        durationEndField.layer.cornerRadius = 15
-        durationEndField.textAlignment = .center
-        view.insertSubview(durationEndField, at: 0)
+        PostStep2AdopterViewController.durationEndField.translatesAutoresizingMaskIntoConstraints = false
+        PostStep2AdopterViewController.durationEndField.attributedPlaceholder = durationEndFieldAttributedTitle
+        PostStep2AdopterViewController.durationEndField.delegate = self
+        PostStep2AdopterViewController.durationEndField.textColor = UIColor(red: 0.07, green: 0.07, blue: 0.07, alpha: 1.0)
+        PostStep2AdopterViewController.durationEndField.autocapitalizationType = .none
+        PostStep2AdopterViewController.durationEndField.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        PostStep2AdopterViewController.durationEndField.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        PostStep2AdopterViewController.durationEndField.autocorrectionType = .no
+        PostStep2AdopterViewController.durationEndField.layer.borderWidth = 2
+        PostStep2AdopterViewController.durationEndField.font = UIFont(name: "Ubuntu-Regular", size: 12)
+        PostStep2AdopterViewController.durationEndField.clipsToBounds = true
+        PostStep2AdopterViewController.durationEndField.layer.cornerRadius = 15
+        PostStep2AdopterViewController.durationEndField.textAlignment = .center
+        view.insertSubview(PostStep2AdopterViewController.durationEndField, at: 0)
         
         //to label
         toLabel.text = "to"
@@ -388,38 +388,38 @@ class PostStep2AdopterViewController: UIViewController {
     
     @objc private func nextClicked(){
         
-        if ((nameField.text?.isEmpty == false) && (ageField.text?.isEmpty == false) && (genderField.text?.isEmpty == false) && (categoryField.text?.isEmpty == false) && (categoryField.text?.isEmpty == false) && (breedField.text?.isEmpty == false) && (durationStartField.text?.isEmpty == false) && (durationEndField.text?.isEmpty == false) && (((onCampusButton.backgroundColor != .white) || (offCampusButton.backgroundColor != .white) || (outsideIthacaButton.backgroundColor != .white)))) {
+        if ((PostStep2AdopterViewController.nameField.text?.isEmpty == false) && (PostStep2AdopterViewController.ageField.text?.isEmpty == false) && (PostStep2AdopterViewController.genderField.text?.isEmpty == false) && (PostStep2AdopterViewController.categoryField.text?.isEmpty == false) && (PostStep2AdopterViewController.categoryField.text?.isEmpty == false) && (PostStep2AdopterViewController.breedField.text?.isEmpty == false) && (PostStep2AdopterViewController.durationStartField.text?.isEmpty == false) && (PostStep2AdopterViewController.durationEndField.text?.isEmpty == false) && (((PostStep2AdopterViewController.onCampusButton.backgroundColor != .white) || (PostStep2AdopterViewController.offCampusButton.backgroundColor != .white) || (PostStep2AdopterViewController.outsideIthacaButton.backgroundColor != .white)))) {
             navigationController?.setViewControllers([PostStep3AdopterViewController()], animated: true)
         }
         return
     }
     
     @objc private func onCampusClick(){
-        onCampusButton.backgroundColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1)
-        onCampusButton.setTitleColor(.white, for: .normal)
-        offCampusButton.backgroundColor = .white
-        offCampusButton.setTitleColor(UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1), for: .normal)
-        outsideIthacaButton.backgroundColor = .white
-        outsideIthacaButton.setTitleColor(UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1), for: .normal)
+        PostStep2AdopterViewController.onCampusButton.backgroundColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1)
+        PostStep2AdopterViewController.onCampusButton.setTitleColor(.white, for: .normal)
+        PostStep2AdopterViewController.offCampusButton.backgroundColor = .white
+        PostStep2AdopterViewController.offCampusButton.setTitleColor(UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1), for: .normal)
+        PostStep2AdopterViewController.outsideIthacaButton.backgroundColor = .white
+        PostStep2AdopterViewController.outsideIthacaButton.setTitleColor(UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1), for: .normal)
         
     }
     
     @objc private func offCampusClick(){
-        offCampusButton.backgroundColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1)
-        offCampusButton.setTitleColor(.white, for: .normal)
-        onCampusButton.backgroundColor = .white
-        onCampusButton.setTitleColor(UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1), for: .normal)
-        outsideIthacaButton.backgroundColor = .white
-        outsideIthacaButton.setTitleColor(UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1), for: .normal)
+        PostStep2AdopterViewController.offCampusButton.backgroundColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1)
+        PostStep2AdopterViewController.offCampusButton.setTitleColor(.white, for: .normal)
+        PostStep2AdopterViewController.onCampusButton.backgroundColor = .white
+        PostStep2AdopterViewController.onCampusButton.setTitleColor(UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1), for: .normal)
+        PostStep2AdopterViewController.outsideIthacaButton.backgroundColor = .white
+        PostStep2AdopterViewController.outsideIthacaButton.setTitleColor(UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1), for: .normal)
     }
     
     @objc private func offIthacaClick(){
-        outsideIthacaButton.backgroundColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1)
-        outsideIthacaButton.setTitleColor(.white, for: .normal)
-        offCampusButton.backgroundColor = .white
-        offCampusButton.setTitleColor(UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1), for: .normal)
-        onCampusButton.backgroundColor = .white
-        onCampusButton.setTitleColor(UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1), for: .normal)
+        PostStep2AdopterViewController.outsideIthacaButton.backgroundColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1)
+        PostStep2AdopterViewController.outsideIthacaButton.setTitleColor(.white, for: .normal)
+        PostStep2AdopterViewController.offCampusButton.backgroundColor = .white
+        PostStep2AdopterViewController.offCampusButton.setTitleColor(UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1), for: .normal)
+        PostStep2AdopterViewController.onCampusButton.backgroundColor = .white
+        PostStep2AdopterViewController.onCampusButton.setTitleColor(UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1), for: .normal)
     }
     
     private func setCons(){
@@ -434,96 +434,96 @@ class PostStep2AdopterViewController: UIViewController {
             nameLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 64),
             
             //set up the name textfield
-            nameField.topAnchor.constraint(equalTo: step2Label.bottomAnchor, constant: 44),
-            nameField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -64),
-            nameField.widthAnchor.constraint(equalToConstant: 125),
-            nameField.heightAnchor.constraint(equalToConstant: 30),
+            PostStep2AdopterViewController.nameField.topAnchor.constraint(equalTo: step2Label.bottomAnchor, constant: 44),
+            PostStep2AdopterViewController.nameField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -64),
+            PostStep2AdopterViewController.nameField.widthAnchor.constraint(equalToConstant: 125),
+            PostStep2AdopterViewController.nameField.heightAnchor.constraint(equalToConstant: 30),
             
             //age label
-            ageLabel.centerYAnchor.constraint(equalTo: ageField.centerYAnchor),
+            ageLabel.centerYAnchor.constraint(equalTo: PostStep2AdopterViewController.ageField.centerYAnchor),
             ageLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 64),
             
             //set up the age textfield
-            ageField.topAnchor.constraint(equalTo: nameField.bottomAnchor, constant: 16),
-            ageField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -138),
-            ageField.widthAnchor.constraint(equalToConstant: 49),
-            ageField.heightAnchor.constraint(equalToConstant: 30),
+            PostStep2AdopterViewController.ageField.topAnchor.constraint(equalTo: PostStep2AdopterViewController.nameField.bottomAnchor, constant: 16),
+            PostStep2AdopterViewController.ageField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -138),
+            PostStep2AdopterViewController.ageField.widthAnchor.constraint(equalToConstant: 49),
+            PostStep2AdopterViewController.ageField.heightAnchor.constraint(equalToConstant: 30),
             
             //years old label
-            yearsOldLabel.centerYAnchor.constraint(equalTo: ageField.centerYAnchor),
-            yearsOldLabel.leadingAnchor.constraint(equalTo: ageField.trailingAnchor,constant: 8),
+            yearsOldLabel.centerYAnchor.constraint(equalTo: PostStep2AdopterViewController.ageField.centerYAnchor),
+            yearsOldLabel.leadingAnchor.constraint(equalTo: PostStep2AdopterViewController.ageField.trailingAnchor,constant: 8),
             
             //gender label
-            genderLabel.centerYAnchor.constraint(equalTo: genderField.centerYAnchor),
+            genderLabel.centerYAnchor.constraint(equalTo: PostStep2AdopterViewController.genderField.centerYAnchor),
             genderLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 64),
             
             //set up the gender textfield
-            genderField.topAnchor.constraint(equalTo: ageField.bottomAnchor, constant: 16),
-            genderField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -64),
-            genderField.widthAnchor.constraint(equalToConstant: 125),
-            genderField.heightAnchor.constraint(equalToConstant: 30),
+            PostStep2AdopterViewController.genderField.topAnchor.constraint(equalTo: PostStep2AdopterViewController.ageField.bottomAnchor, constant: 16),
+            PostStep2AdopterViewController.genderField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -64),
+            PostStep2AdopterViewController.genderField.widthAnchor.constraint(equalToConstant: 125),
+            PostStep2AdopterViewController.genderField.heightAnchor.constraint(equalToConstant: 30),
             
             //category label
-            categoryLabel.centerYAnchor.constraint(equalTo: categoryField.centerYAnchor),
+            categoryLabel.centerYAnchor.constraint(equalTo: PostStep2AdopterViewController.categoryField.centerYAnchor),
             categoryLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 64),
             
             //set up the category textfield
-            categoryField.topAnchor.constraint(equalTo: genderField.bottomAnchor, constant: 16),
-            categoryField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -64),
-            categoryField.widthAnchor.constraint(equalToConstant: 125),
-            categoryField.heightAnchor.constraint(equalToConstant: 30),
+            PostStep2AdopterViewController.categoryField.topAnchor.constraint(equalTo: PostStep2AdopterViewController.genderField.bottomAnchor, constant: 16),
+            PostStep2AdopterViewController.categoryField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -64),
+            PostStep2AdopterViewController.categoryField.widthAnchor.constraint(equalToConstant: 125),
+            PostStep2AdopterViewController.categoryField.heightAnchor.constraint(equalToConstant: 30),
             
             //breed label
-            breedLabel.centerYAnchor.constraint(equalTo: breedField.centerYAnchor),
+            breedLabel.centerYAnchor.constraint(equalTo: PostStep2AdopterViewController.breedField.centerYAnchor),
             breedLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 64),
             
             //set up the breed textfield
-            breedField.topAnchor.constraint(equalTo: categoryField.bottomAnchor, constant: 16),
-            breedField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -64),
-            breedField.widthAnchor.constraint(equalToConstant: 125),
-            breedField.heightAnchor.constraint(equalToConstant: 30),
+            PostStep2AdopterViewController.breedField.topAnchor.constraint(equalTo: PostStep2AdopterViewController.categoryField.bottomAnchor, constant: 16),
+            PostStep2AdopterViewController.breedField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -64),
+            PostStep2AdopterViewController.breedField.widthAnchor.constraint(equalToConstant: 125),
+            PostStep2AdopterViewController.breedField.heightAnchor.constraint(equalToConstant: 30),
             
             //set up the current location label
             currentLocation.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 64),
-            currentLocation.topAnchor.constraint(equalTo: breedField.bottomAnchor,constant: 24),
+            currentLocation.topAnchor.constraint(equalTo: PostStep2AdopterViewController.breedField.bottomAnchor,constant: 24),
             
             //on campus button
-            onCampusButton.widthAnchor.constraint(equalToConstant: 94),
-            onCampusButton.heightAnchor.constraint(equalToConstant: 29),
-            onCampusButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 64),
-            onCampusButton.topAnchor.constraint(equalTo: currentLocation.bottomAnchor,constant: 16),
+            PostStep2AdopterViewController.onCampusButton.widthAnchor.constraint(equalToConstant: 94),
+            PostStep2AdopterViewController.onCampusButton.heightAnchor.constraint(equalToConstant: 29),
+            PostStep2AdopterViewController.onCampusButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 64),
+            PostStep2AdopterViewController.onCampusButton.topAnchor.constraint(equalTo: currentLocation.bottomAnchor,constant: 16),
             
             //off campus button
-            offCampusButton.widthAnchor.constraint(equalToConstant: 138),
-            offCampusButton.heightAnchor.constraint(equalToConstant: 29),
-            offCampusButton.centerYAnchor.constraint(equalTo: onCampusButton.centerYAnchor),
-            offCampusButton.leadingAnchor.constraint(equalTo: onCampusButton.trailingAnchor,constant: 10),
+            PostStep2AdopterViewController.offCampusButton.widthAnchor.constraint(equalToConstant: 138),
+            PostStep2AdopterViewController.offCampusButton.heightAnchor.constraint(equalToConstant: 29),
+            PostStep2AdopterViewController.offCampusButton.centerYAnchor.constraint(equalTo: PostStep2AdopterViewController.onCampusButton.centerYAnchor),
+            PostStep2AdopterViewController.offCampusButton.leadingAnchor.constraint(equalTo: PostStep2AdopterViewController.onCampusButton.trailingAnchor,constant: 10),
             
             //off ithaca button
-            outsideIthacaButton.widthAnchor.constraint(equalToConstant: 110),
-            outsideIthacaButton.heightAnchor.constraint(equalToConstant: 29),
-            outsideIthacaButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 64),
-            outsideIthacaButton.topAnchor.constraint(equalTo: onCampusButton.bottomAnchor,constant: 7),
+            PostStep2AdopterViewController.outsideIthacaButton.widthAnchor.constraint(equalToConstant: 110),
+            PostStep2AdopterViewController.outsideIthacaButton.heightAnchor.constraint(equalToConstant: 29),
+            PostStep2AdopterViewController.outsideIthacaButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 64),
+            PostStep2AdopterViewController.outsideIthacaButton.topAnchor.constraint(equalTo: PostStep2AdopterViewController.onCampusButton.bottomAnchor,constant: 7),
             
             //duration Label
-            duratonLabel.topAnchor.constraint(equalTo: outsideIthacaButton.bottomAnchor,constant: 16),
+            duratonLabel.topAnchor.constraint(equalTo: PostStep2AdopterViewController.outsideIthacaButton.bottomAnchor,constant: 16),
             duratonLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 64),
             
             //duration Start field
-            durationStartField.topAnchor.constraint(equalTo: duratonLabel.bottomAnchor, constant: 12),
-            durationStartField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 64),
-            durationStartField.widthAnchor.constraint(equalToConstant: 93),
-            durationStartField.heightAnchor.constraint(equalToConstant: 30),
+            PostStep2AdopterViewController.durationStartField.topAnchor.constraint(equalTo: duratonLabel.bottomAnchor, constant: 12),
+            PostStep2AdopterViewController.durationStartField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 64),
+            PostStep2AdopterViewController.durationStartField.widthAnchor.constraint(equalToConstant: 93),
+            PostStep2AdopterViewController.durationStartField.heightAnchor.constraint(equalToConstant: 30),
             
             //to label
-            toLabel.centerYAnchor.constraint(equalTo: durationStartField.centerYAnchor),
-            toLabel.leadingAnchor.constraint(equalTo: durationStartField.trailingAnchor,constant: 10),
+            toLabel.centerYAnchor.constraint(equalTo: PostStep2AdopterViewController.durationStartField.centerYAnchor),
+            toLabel.leadingAnchor.constraint(equalTo: PostStep2AdopterViewController.durationStartField.trailingAnchor,constant: 10),
             
             //duration end field
-            durationEndField.topAnchor.constraint(equalTo: duratonLabel.bottomAnchor, constant: 12),
-            durationEndField.leadingAnchor.constraint(equalTo: toLabel.trailingAnchor,constant: 10),
-            durationEndField.widthAnchor.constraint(equalToConstant: 93),
-            durationEndField.heightAnchor.constraint(equalToConstant: 30),
+            PostStep2AdopterViewController.durationEndField.topAnchor.constraint(equalTo: duratonLabel.bottomAnchor, constant: 12),
+            PostStep2AdopterViewController.durationEndField.leadingAnchor.constraint(equalTo: toLabel.trailingAnchor,constant: 10),
+            PostStep2AdopterViewController.durationEndField.widthAnchor.constraint(equalToConstant: 93),
+            PostStep2AdopterViewController.durationEndField.heightAnchor.constraint(equalToConstant: 30),
             
             //bottom line
             bottomLine.leftAnchor.constraint(equalTo: view.leftAnchor),

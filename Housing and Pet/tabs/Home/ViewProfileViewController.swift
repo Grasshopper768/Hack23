@@ -61,9 +61,6 @@ class ViewProfileViewController2: UIViewController {
         
         //pView
         pView.image = pet.imageView.image
-        pView.frame = CGRect(x: 0, y: 0, width: 342, height: 262)
-        pView.backgroundColor = .white
-        pView.layer.backgroundColor = UIColor(red: 0.851, green: 0.851, blue: 0.851, alpha: 0.6).cgColor
         pView.clipsToBounds = true
         pView.translatesAutoresizingMaskIntoConstraints = false
         pView.layer.cornerRadius = 30
@@ -255,7 +252,7 @@ class ViewProfileViewController2: UIViewController {
         //pView
         pView.widthAnchor.constraint(equalToConstant: 342).isActive = true
         pView.heightAnchor.constraint(equalToConstant: 262).isActive = true
-        pView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 17).isActive = true
+        pView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         pView.topAnchor.constraint(equalTo: view.topAnchor, constant: 62).isActive = true
         
         //owner

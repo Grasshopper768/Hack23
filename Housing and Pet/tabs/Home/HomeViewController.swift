@@ -8,7 +8,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
+
     let buttonWidth = 100
     let buttonHeight = 50
     let itemPadding: CGFloat = 10
@@ -41,14 +41,24 @@ class HomeViewController: UIViewController {
     
 
     private var filters = ["All", "Mix","Cat",  "Dog", "Bunny"]
-    var selectedPets : Pets = Pets(pet_sitting_requests: [Pet(id: 123, pet_owner_id: 1, pet_sitter_id: 2,name: "Bob", age: "3", gender: "Male", category: "Dog", breed: "Unknown", on_campus: true, off_campus: false, outside: false, start_time: "June 1", end_time: "August 1", pet_description: "None", additional_info: "None", food_supplies: true,sitter_pay: true, sitter_housing: true, assets: [assets(base_url: "image", created_at: "2023-05-05 07:01:42.443320", asset_id: 2, user_id: 1, pet_sitting_id: 0, pet_adoption_id: 4)]),
+    var selectedPets : Pets = Pets(pet_sitting_requests: [Pet(id: 23, pet_owner_id: 12, pet_sitter_id: 21,name: "Bob", age: "2", gender: "Male", category: "Cat", breed: "Unknown", on_campus: true, off_campus: false, outside: false, start_time: "June 1", end_time: "August 1", pet_description: "None", additional_info: "None", food_supplies: true,sitter_pay: true, sitter_housing: true, assets: [assets(base_url: "bob", created_at: "2023-05-05 07:01:42.443320", asset_id: 2, user_id: 1, pet_sitting_id: 0, pet_adoption_id: 4)]),
+                                                          
+      Pet(id: 23, pet_owner_id: 12, pet_sitter_id: 21,name: "Peter", age: "2", gender: "Male", category: "Cat", breed: "Unknown", on_campus: true, off_campus: false, outside: false, start_time: "June 1", end_time: "August 1", pet_description: "None", additional_info: "None", food_supplies: true,sitter_pay: true, sitter_housing: true, assets: [assets(base_url: "Peter", created_at: "2023-05-05 07:01:42.443320", asset_id: 2, user_id: 1, pet_sitting_id: 0, pet_adoption_id: 4)]),
+      Pet(id: 23, pet_owner_id: 12, pet_sitter_id: 21,name: "Jack", age: "2", gender: "Male", category: "Cat", breed: "Unknown", on_campus: true, off_campus: false, outside: false, start_time: "June 1", end_time: "August 1", pet_description: "None", additional_info: "None", food_supplies: true,sitter_pay: true, sitter_housing: true, assets: [assets(base_url: "jack", created_at: "2023-05-05 07:01:42.443320", asset_id: 2, user_id: 1, pet_sitting_id: 0, pet_adoption_id: 4)]),
+      Pet(id: 23, pet_owner_id: 12, pet_sitter_id: 21,name: "Poppy", age: "2", gender: "Male", category: "Cat", breed: "Unknown", on_campus: true, off_campus: false, outside: false, start_time: "June 1", end_time: "August 1", pet_description: "None", additional_info: "None", food_supplies: true,sitter_pay: true, sitter_housing: true, assets: [assets(base_url: "fish 1", created_at: "2023-05-05 07:01:42.443320", asset_id: 2, user_id: 1, pet_sitting_id: 0, pet_adoption_id: 4)]),
+
         Pet(id: 23, pet_owner_id: 12, pet_sitter_id: 21,name: "Spot", age: "2", gender: "Male", category: "Cat", breed: "Unknown", on_campus: true, off_campus: false, outside: false, start_time: "June 1", end_time: "August 1", pet_description: "None", additional_info: "None", food_supplies: true,sitter_pay: true, sitter_housing: true, assets: [assets(base_url: "image3", created_at: "2023-05-05 07:01:42.443320", asset_id: 2, user_id: 1, pet_sitting_id: 0, pet_adoption_id: 4)]),
+      Pet(id: 25, pet_owner_id: 13, pet_sitter_id: 21,name: "Spot", age: "2", gender: "Male", category: "Peter", breed: "Unknown", on_campus: true, off_campus: false, outside: false, start_time: "June 1", end_time: "August 1", pet_description: "None", additional_info: "None", food_supplies: true,sitter_pay: true, sitter_housing: true, assets: [assets(base_url: "image3", created_at: "2023-05-05 07:01:42.443320", asset_id: 2, user_id: 1, pet_sitting_id: 0, pet_adoption_id: 4)]),
+        
         Pet(id: 23, pet_owner_id: 12, pet_sitter_id: 21,name: "Ferguson", age: "2", gender: "Male", category: "Bunny", breed: "Unknown", on_campus: true, off_campus: false, outside: false, start_time: "June 1", end_time: "August 1", pet_description: "None", additional_info: "None", food_supplies: true,sitter_pay: true, sitter_housing: true, assets: [assets(base_url: "bunny1", created_at: "2023-05-05 07:01:42.443320", asset_id: 2, user_id: 1, pet_sitting_id: 0, pet_adoption_id: 4)])])
-    private var pets : Pets = Pets(pet_sitting_requests: [Pet(id: 123, pet_owner_id: 1, pet_sitter_id: 2,name: "Bob", age: "3", gender: "Male", category: "Dog", breed: "Unknown", on_campus: true, off_campus: false, outside: false, start_time: "June 1", end_time: "August 1", pet_description: "None", additional_info: "None", food_supplies: true,sitter_pay: true, sitter_housing: true, assets: [assets(base_url: "image", created_at: "2023-05-05 07:01:42.443320", asset_id: 2, user_id: 1, pet_sitting_id: 0, pet_adoption_id: 4)]),
+    private var pets : Pets = Pets(pet_sitting_requests: [Pet(id: 23, pet_owner_id: 12, pet_sitter_id: 21,name: "Bob", age: "2", gender: "Male", category: "Cat", breed: "Unknown", on_campus: true, off_campus: false, outside: false, start_time: "June 1", end_time: "August 1", pet_description: "None", additional_info: "None", food_supplies: true,sitter_pay: true, sitter_housing: true, assets: [assets(base_url: "bob", created_at: "2023-05-05 07:01:42.443320", asset_id: 2, user_id: 1, pet_sitting_id: 0, pet_adoption_id: 4)]),
         Pet(id: 23, pet_owner_id: 12, pet_sitter_id: 21,name: "Spot", age: "2", gender: "Male", category: "Cat", breed: "Unknown", on_campus: true, off_campus: false, outside: false, start_time: "June 1", end_time: "August 1", pet_description: "None", additional_info: "None", food_supplies: true,sitter_pay: true, sitter_housing: true, assets: [assets(base_url: "image3", created_at: "2023-05-05 07:01:42.443320", asset_id: 2, user_id: 1, pet_sitting_id: 0, pet_adoption_id: 4)]),
+      Pet(id: 23, pet_owner_id: 12, pet_sitter_id: 21,name: "Poppy", age: "2", gender: "Male", category: "Cat", breed: "Unknown", on_campus: true, off_campus: false, outside: false, start_time: "June 1", end_time: "August 1", pet_description: "None", additional_info: "None", food_supplies: true,sitter_pay: true, sitter_housing: true, assets: [assets(base_url: "fish 1", created_at: "2023-05-05 07:01:42.443320", asset_id: 2, user_id: 1, pet_sitting_id: 0, pet_adoption_id: 4)]),
+      Pet(id: 23, pet_owner_id: 12, pet_sitter_id: 21,name: "Jack", age: "2", gender: "Male", category: "Cat", breed: "Unknown", on_campus: true, off_campus: false, outside: false, start_time: "June 1", end_time: "August 1", pet_description: "None", additional_info: "None", food_supplies: true,sitter_pay: true, sitter_housing: true, assets: [assets(base_url: "jack", created_at: "2023-05-05 07:01:42.443320", asset_id: 2, user_id: 1, pet_sitting_id: 0, pet_adoption_id: 4)]),
+      Pet(id: 23, pet_owner_id: 12, pet_sitter_id: 21,name: "Peter", age: "2", gender: "Male", category: "Cat", breed: "Unknown", on_campus: true, off_campus: false, outside: false, start_time: "June 1", end_time: "August 1", pet_description: "None", additional_info: "None", food_supplies: true,sitter_pay: true, sitter_housing: true, assets: [assets(base_url: "Peter", created_at: "2023-05-05 07:01:42.443320", asset_id: 2, user_id: 1, pet_sitting_id: 0, pet_adoption_id: 4)]),
         Pet(id: 23, pet_owner_id: 12, pet_sitter_id: 21,name: "Ferguson", age: "2", gender: "Male", category: "Bunny", breed: "Unknown", on_campus: true, off_campus: false, outside: false, start_time: "June 1", end_time: "August 1", pet_description: "None", additional_info: "None", food_supplies: true,sitter_pay: true, sitter_housing: true, assets: [assets(base_url: "bunny1", created_at: "2023-05-05 07:01:42.443320", asset_id: 2, user_id: 1, pet_sitting_id: 0, pet_adoption_id: 4)])])
-    var adoptionPets : AdoptionPets = AdoptionPets(pet_adoption_requests: [AdoptionPet(id: 123, pet_owner_id: 1, pet_adopter_id: 2,name: "Bob", age: "3", gender: "Male", category: "Dog", breed: "Unknown", on_campus: true, off_campus: false, outside: false, end_time: "August 1", pet_description: "None", additional_info: "None", food_supplies: true, adopter_reward : true , assets: [asset(base_url: "image", created_at: "2023-05-05 07:01:42.443320", asset_id: 2, user_id: 1, pet_sitting_id: 0, pet_adoption_id: 4)]), AdoptionPet(id: 13, pet_owner_id: 12, pet_adopter_id: 3,name: "Spot", age: "2", gender: "Male", category: "Dog", breed: "Unknown", on_campus: true, off_campus: false, outside: false, end_time: "August 1", pet_description: "None", additional_info: "None", food_supplies: true, adopter_reward : true , assets: [asset(base_url: "image3", created_at: "2023-05-05 07:01:42.443320", asset_id: 21, user_id: 11, pet_sitting_id: 20, pet_adoption_id: 41)])])
-    var selectedAdoptionPets  : AdoptionPets = AdoptionPets(pet_adoption_requests: [AdoptionPet(id: 123, pet_owner_id: 1, pet_adopter_id: 2,name: "Bob", age: "3", gender: "Male", category: "Dog", breed: "Unknown", on_campus: true, off_campus: false, outside: false, end_time: "August 1", pet_description: "None", additional_info: "None", food_supplies: true, adopter_reward : true , assets: [asset(base_url: "image", created_at: "2023-05-05 07:01:42.443320", asset_id: 2, user_id: 1, pet_sitting_id: 0, pet_adoption_id: 4)]), AdoptionPet(id: 13, pet_owner_id: 12, pet_adopter_id: 3,name: "Spot", age: "2", gender: "Male", category: "Dog", breed: "Unknown", on_campus: true, off_campus: false, outside: false, end_time: "August 1", pet_description: "None", additional_info: "None", food_supplies: true, adopter_reward : true , assets: [asset(base_url: "image3", created_at: "2023-05-05 07:01:42.443320", asset_id: 21, user_id: 11, pet_sitting_id: 20, pet_adoption_id: 41)])])
+    var adoptionPets : AdoptionPets = AdoptionPets(pet_adoption_requests: [AdoptionPet(id: 123, pet_owner_id: 1, pet_adopter_id: 2,name: "Sunny", age: "3", gender: "Male", category: "Dog", breed: "Unknown", on_campus: true, off_campus: false, outside: false, end_time: "August 1", pet_description: "None", additional_info: "None", food_supplies: true, adopter_reward : true , assets: [asset(base_url: "sunny", created_at: "2023-05-05 07:01:42.443320", asset_id: 2, user_id: 1, pet_sitting_id: 0, pet_adoption_id: 4)]), AdoptionPet(id: 13, pet_owner_id: 12, pet_adopter_id: 3,name: "Trump", age: "2", gender: "Male", category: "Dog", breed: "Unknown", on_campus: true, off_campus: false, outside: false, end_time: "August 1", pet_description: "None", additional_info: "None", food_supplies: true, adopter_reward : true , assets: [asset(base_url: "trump", created_at: "2023-05-05 07:01:42.443320", asset_id: 21, user_id: 11, pet_sitting_id: 20, pet_adoption_id: 41)])])
+    var selectedAdoptionPets  : AdoptionPets = AdoptionPets(pet_adoption_requests: [AdoptionPet(id: 123, pet_owner_id: 1, pet_adopter_id: 2,name: "Bob", age: "3", gender: "Male", category: "Dog", breed: "Unknown", on_campus: true, off_campus: false, outside: false, end_time: "August 1", pet_description: "None", additional_info: "None", food_supplies: true, adopter_reward : true , assets: [asset(base_url: "image", created_at: "2023-05-05 07:01:42.443320", asset_id: 2, user_id: 1, pet_sitting_id: 0, pet_adoption_id: 4)]), AdoptionPet(id: 13, pet_owner_id: 12, pet_adopter_id: 3,name: "Trump", age: "2", gender: "Male", category: "Dog", breed: "Unknown", on_campus: true, off_campus: false, outside: false, end_time: "August 1", pet_description: "None", additional_info: "None", food_supplies: true, adopter_reward : true , assets: [asset(base_url: "trump", created_at: "2023-05-05 07:01:42.443320", asset_id: 21, user_id: 11, pet_sitting_id: 20, pet_adoption_id: 41)])])
     var selectedFilters : [Int] = []
 //
     override func viewDidLoad() {
@@ -61,6 +71,8 @@ class HomeViewController: UIViewController {
         userModeView.backgroundColor = .white
         userModeView.translatesAutoresizingMaskIntoConstraints = false
         
+
+
         
         //sitter button
         sitter.setTitle("Sitter", for: .normal)
@@ -94,6 +106,7 @@ class HomeViewController: UIViewController {
         ovalTextField.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(ovalTextField)
         
+        
         //search button
         let searchImage = UIImage(systemName: "magnifyingglass")?.withTintColor(.black, renderingMode: .alwaysOriginal)
         searchButton.setImage(searchImage, for: .normal)
@@ -101,11 +114,11 @@ class HomeViewController: UIViewController {
         view.addSubview(searchButton)
         
         let title = "All"
-        let attributes: [NSAttributedString.Key: Any] = [.font: UIFont.boldSystemFont(ofSize: 20)]
+        let attributes: [NSAttributedString.Key: Any] = [.font: UIFont(name: "Ubuntu-Medium", size: 18)]
         let attributedTitle = NSAttributedString(string: title, attributes: attributes)
         all.setAttributedTitle(attributedTitle, for: .normal)
         all.layer.cornerRadius = 20
-        all.setTitleColor(.black, for: .normal)
+        all.setTitleColor(UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1), for: .normal)
         all.layer.borderWidth = 2.0
         all.layer.borderColor = UIColor.black.cgColor
         all.addTarget(self, action: #selector(changeColor), for: .touchUpInside)
@@ -115,6 +128,7 @@ class HomeViewController: UIViewController {
         dog.setImage(UIImage(named: "dog"), for: .normal)
         dog.setTitle("Dog", for: .normal)
         dog.setTitleColor(.black, for: .normal)
+        dog.titleLabel?.font = UIFont(name: "Ubuntu-Regular", size: 14)
         dog.imageView?.contentMode = .bottomRight
         dog.titleEdgeInsets = UIEdgeInsets(top: 40, left: -45, bottom: 0, right: 0)
         dog.imageEdgeInsets = UIEdgeInsets(top: -10, left: 10, bottom: 0, right: -dog.titleLabel!.frame.size.width)
@@ -126,6 +140,7 @@ class HomeViewController: UIViewController {
         cat.setImage(UIImage(named: "cat"), for: .normal)
         cat.setTitle("Cat", for: .normal)
         cat.setTitleColor(.black, for: .normal)
+        cat.titleLabel?.font = UIFont(name: "Ubuntu-Regular", size: 14)
         cat.imageView?.contentMode = .bottomRight
         cat.titleEdgeInsets = UIEdgeInsets(top: 45, left: -45, bottom: 0, right: 0)
         cat.imageEdgeInsets = UIEdgeInsets(top: -10, left: 10, bottom: 0, right: -cat.titleLabel!.frame.size.width)
@@ -137,6 +152,7 @@ class HomeViewController: UIViewController {
         rodent.setImage(UIImage(named: "rodent"), for: .normal)
         rodent.setTitle("Rodent", for: .normal)
         rodent.setTitleColor(.black, for: .normal)
+        rodent.titleLabel?.font = UIFont(name: "Ubuntu-Regular", size: 14)
         rodent.imageView?.contentMode = .bottomRight
         rodent.titleEdgeInsets = UIEdgeInsets(top: 45, left: -35, bottom: 0, right: 0)
         rodent.imageEdgeInsets = UIEdgeInsets(top: -10, left: 20, bottom: 0, right: -rodent.titleLabel!.frame.size.width)
@@ -148,8 +164,9 @@ class HomeViewController: UIViewController {
         bird.setImage(UIImage(named: "bird"), for: .normal)
         bird.setTitle("Bird", for: .normal)
         bird.setTitleColor(.black, for: .normal)
+        bird.titleLabel?.font = UIFont(name: "Ubuntu-Regular", size: 14)
         bird.imageView?.contentMode = .bottomRight
-        bird.titleEdgeInsets = UIEdgeInsets(top: 45, left: -35, bottom: 0, right: 0)
+        bird.titleEdgeInsets = UIEdgeInsets(top: 45, left: -50, bottom: 0, right: 0)
         bird.imageEdgeInsets = UIEdgeInsets(top: -10, left: 10, bottom: 0, right: -bird.titleLabel!.frame.size.width)
         bird.layer.cornerRadius = 25
         bird.addTarget(self, action: #selector(changeColor), for: .touchUpInside)
@@ -159,6 +176,7 @@ class HomeViewController: UIViewController {
         fish.setImage(UIImage(named: "fish"), for: .normal)
         fish.setTitle("Fish", for: .normal)
         fish.setTitleColor(.black, for: .normal)
+        fish.titleLabel?.font = UIFont(name: "Ubuntu-Regular", size: 14)
         fish.imageView?.contentMode = .bottomRight
         fish.titleEdgeInsets = UIEdgeInsets(top: 45, left: -45, bottom: 0, right: 0)
         fish.imageEdgeInsets = UIEdgeInsets(top: -10, left: 10, bottom: 0, right: -fish.titleLabel!.frame.size.width)
@@ -170,6 +188,7 @@ class HomeViewController: UIViewController {
         reptile.setImage(UIImage(named: "reptile"), for: .normal)
         reptile.setTitle("Reptile", for: .normal)
         reptile.setTitleColor(.black, for: .normal)
+        reptile.titleLabel?.font = UIFont(name: "Ubuntu-Regular", size: 14)
         reptile.imageView?.contentMode = .bottomRight
         reptile.titleEdgeInsets = UIEdgeInsets(top: 45, left: -45, bottom: 0, right: 0)
         reptile.imageEdgeInsets = UIEdgeInsets(top: -10, left: 10, bottom: 0, right: -reptile.titleLabel!.frame.size.width)
@@ -182,6 +201,7 @@ class HomeViewController: UIViewController {
         insect.setTitle("Insect", for: .normal)
         insect.setTitleColor(.black, for: .normal)
         insect.imageView?.contentMode = .bottomRight
+        insect.titleLabel?.font = UIFont(name: "Ubuntu-Regular", size: 14)
         insect.titleEdgeInsets = UIEdgeInsets(top: 45, left: -42, bottom: 0, right: 0)
         insect.imageEdgeInsets = UIEdgeInsets(top: -10, left: 15, bottom: 0, right: -insect.titleLabel!.frame.size.width)
         insect.layer.cornerRadius = 25
@@ -190,7 +210,7 @@ class HomeViewController: UIViewController {
         view.addSubview(insect)
         
         let titl = "Other"
-        let attribute: [NSAttributedString.Key: Any] = [.font: UIFont.boldSystemFont(ofSize: 20)]
+        let attribute: [NSAttributedString.Key: Any] = [.font: UIFont(name: "Ubuntu-Regular", size: 12)]
         let attributedTitles = NSAttributedString(string: titl, attributes: attribute)
         other.setAttributedTitle(attributedTitles, for: .normal)
         other.layer.cornerRadius = 20
@@ -232,7 +252,7 @@ class HomeViewController: UIViewController {
     func setupConstraints() {
         //con
         NSLayoutConstraint.activate([
-            userModeView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 8),
+            userModeView.topAnchor.constraint(equalTo: view.topAnchor,constant: 83),
             userModeView.trailingAnchor.constraint(equalTo: adopter.trailingAnchor, constant: 1),
             userModeView.heightAnchor.constraint(equalToConstant: 37),
             userModeView.widthAnchor.constraint(equalToConstant: 152)
@@ -240,26 +260,27 @@ class HomeViewController: UIViewController {
         ])
         
         NSLayoutConstraint.activate([
-            sitter.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10 ),
+            sitter.topAnchor.constraint(equalTo: view.topAnchor,constant: 85),
             sitter.trailingAnchor.constraint(equalTo: view.centerXAnchor),
             sitter.heightAnchor.constraint(equalToConstant: 35),
             sitter.widthAnchor.constraint(equalToConstant: 75)
         ])
         
         NSLayoutConstraint.activate([
-            adopter.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10 ),
+            adopter.topAnchor.constraint(equalTo: view.topAnchor,constant: 85),
             adopter.leadingAnchor.constraint(equalTo: sitter.trailingAnchor),
             adopter.heightAnchor.constraint(equalToConstant: 35),
             adopter.widthAnchor.constraint(equalToConstant: 75)
         ])
         
+        
         let collectionViewPadding: CGFloat = 12
         
         NSLayoutConstraint.activate([
-            ovalTextField.topAnchor.constraint(equalTo: sitter.bottomAnchor, constant: 10),
-            ovalTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            ovalTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -70),
-            ovalTextField.heightAnchor.constraint(equalToConstant: 40),
+            ovalTextField.topAnchor.constraint(equalTo: sitter.bottomAnchor, constant: 28),
+            ovalTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 44),
+            ovalTextField.widthAnchor.constraint(equalToConstant: 272),
+            ovalTextField.heightAnchor.constraint(equalToConstant: 38.84),
             searchButton.leadingAnchor.constraint(equalTo: ovalTextField.leadingAnchor, constant: 5),
             searchButton.widthAnchor.constraint(equalToConstant: 30),
             searchButton.heightAnchor.constraint(equalToConstant: 30),
@@ -268,54 +289,54 @@ class HomeViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             all.topAnchor.constraint(equalTo: ovalTextField.bottomAnchor, constant: 38),
-            all.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5),
-            all.heightAnchor.constraint(equalToConstant: 40),
-            all.widthAnchor.constraint(equalToConstant: 70)])
+            all.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 27),
+            all.heightAnchor.constraint(equalToConstant: 45),
+            all.widthAnchor.constraint(equalToConstant: 53)])
         
         NSLayoutConstraint.activate([
-            dog.topAnchor.constraint(equalTo: all.topAnchor, constant: -8),
-            dog.bottomAnchor.constraint(equalTo: all.bottomAnchor, constant: 8),
-            dog.leadingAnchor.constraint(equalTo: all.trailingAnchor, constant: 5),
-            dog.widthAnchor.constraint(equalToConstant: 70)
+            dog.topAnchor.constraint(equalTo: all.topAnchor),
+            dog.leadingAnchor.constraint(equalTo: all.trailingAnchor, constant: 3),
+            dog.heightAnchor.constraint(equalToConstant: 48.31),
+            dog.widthAnchor.constraint(equalToConstant: 70),
         ])
 
         NSLayoutConstraint.activate([
             cat.topAnchor.constraint(equalTo: dog.topAnchor),
-            cat.bottomAnchor.constraint(equalTo: dog.bottomAnchor),
-            cat.leadingAnchor.constraint(equalTo: dog.trailingAnchor, constant: 5),
-            cat.widthAnchor.constraint(equalToConstant: 70)
+            cat.leadingAnchor.constraint(equalTo: dog.trailingAnchor),
+            cat.widthAnchor.constraint(equalToConstant: 70),
+            cat.heightAnchor.constraint(equalToConstant: 37.14),
         ])
         
         NSLayoutConstraint.activate([
             rodent.topAnchor.constraint(equalTo: cat.topAnchor),
-            rodent.bottomAnchor.constraint(equalTo: cat.bottomAnchor),
-            rodent.leadingAnchor.constraint(equalTo: cat.trailingAnchor, constant: 5),
+            rodent.heightAnchor.constraint(equalToConstant: 37.41),
+            rodent.leadingAnchor.constraint(equalTo: cat.trailingAnchor),
             rodent.widthAnchor.constraint(equalToConstant: 75)
         ])
         
         NSLayoutConstraint.activate([
             bird.topAnchor.constraint(equalTo: rodent.topAnchor),
-            bird.bottomAnchor.constraint(equalTo: rodent.bottomAnchor),
-            bird.leadingAnchor.constraint(equalTo: rodent.trailingAnchor, constant: 5),
+            bird.heightAnchor.constraint(equalToConstant: 37.41),
+            bird.leadingAnchor.constraint(equalTo: rodent.trailingAnchor),
             bird.widthAnchor.constraint(equalToConstant: 70)
         ])
         
         NSLayoutConstraint.activate([
-            fish.topAnchor.constraint(equalTo: all.bottomAnchor, constant: 18),
+            fish.topAnchor.constraint(equalTo: all.bottomAnchor, constant: 34.29),
             fish.heightAnchor.constraint(equalToConstant: 60),
             fish.leadingAnchor.constraint(equalTo: all.trailingAnchor, constant: -30),
             fish.widthAnchor.constraint(equalToConstant: 70)
         ])
         
         NSLayoutConstraint.activate([
-            reptile.topAnchor.constraint(equalTo: fish.topAnchor),
-            reptile.heightAnchor.constraint(equalToConstant: 60),
+            reptile.topAnchor.constraint(equalTo: fish.topAnchor,constant: 10),
+            reptile.heightAnchor.constraint(equalToConstant: 35.78),
             reptile.leadingAnchor.constraint(equalTo: fish.trailingAnchor, constant: 5),
             reptile.widthAnchor.constraint(equalToConstant: 70)
         ])
         
         NSLayoutConstraint.activate([
-            insect.topAnchor.constraint(equalTo: reptile.topAnchor),
+            insect.topAnchor.constraint(equalTo: fish.topAnchor,constant: -2),
             insect.heightAnchor.constraint(equalToConstant: 60),
             insect.leadingAnchor.constraint(equalTo: reptile.trailingAnchor, constant: 5),
             insect.widthAnchor.constraint(equalToConstant: 70)
@@ -323,9 +344,9 @@ class HomeViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             other.topAnchor.constraint(equalTo: insect.topAnchor, constant: 8),
-            other.heightAnchor.constraint(equalToConstant: 40),
-            other.leadingAnchor.constraint(equalTo: insect.trailingAnchor, constant: 5),
-            other.widthAnchor.constraint(equalToConstant: 70)
+            other.heightAnchor.constraint(equalToConstant: 38),
+            other.leadingAnchor.constraint(equalTo: insect.trailingAnchor, constant: 10),
+            other.widthAnchor.constraint(equalToConstant: 53)
         ])
             
         NSLayoutConstraint.activate([
@@ -511,4 +532,6 @@ extension HomeViewController : UICollectionViewDelegateFlowLayout{
         }
     }
 }
+
+
 

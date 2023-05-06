@@ -16,14 +16,14 @@ class PostStep5AdopterViewController: UIViewController {
     let nextButton = UIButton()
     let foodLabel = UILabel()
     let yesNoFoodswitch = CustomSwitch()
-    let yesFoodLabel = UILabel()
+    static let yesFoodLabel = UILabel()
     let noFoodLabel = UILabel()
-    let step5TextView = UITextView()
+    static let step5TextView = UITextView()
     let placeholder = "List out the instructions to take care of\nyour pet here\n(maximum 200 words)"
     let maxWords = 200
     let awardLabel = UILabel()
     let yesNoAwardswitch = CustomSwitch()
-    let yesAwardLabel = UILabel()
+    static let yesAwardLabel = UILabel()
     let noAwardLabel = UILabel()
     
     override func viewDidLoad() {
@@ -118,11 +118,11 @@ class PostStep5AdopterViewController: UIViewController {
         yesNoFoodswitch.addTarget(self, action: #selector(switchFoodButton), for: .touchUpInside)
        
         //yes label
-        yesFoodLabel.text = "Yes"
-        yesFoodLabel.textColor = .white
-        yesFoodLabel.translatesAutoresizingMaskIntoConstraints = false
-        yesFoodLabel.font = UIFont(name: "Ubuntu-Regular", size: 14)
-        view.insertSubview(yesFoodLabel, at: 1)
+        PostStep5AdopterViewController.yesFoodLabel.text = "Yes"
+        PostStep5AdopterViewController.yesFoodLabel.textColor = .white
+        PostStep5AdopterViewController.yesFoodLabel.translatesAutoresizingMaskIntoConstraints = false
+        PostStep5AdopterViewController.yesFoodLabel.font = UIFont(name: "Ubuntu-Regular", size: 14)
+        view.insertSubview(PostStep5AdopterViewController.yesFoodLabel, at: 1)
         
         //no label
         noFoodLabel.text = "No"
@@ -132,19 +132,19 @@ class PostStep5AdopterViewController: UIViewController {
         view.insertSubview(noFoodLabel, at: 1)
         
         //step 4 textview
-        step5TextView.clipsToBounds = true
-        step5TextView.layer.cornerRadius = 30
-        step5TextView.layer.borderColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1).cgColor
-        step5TextView.layer.borderWidth = 3
-        step5TextView.text = placeholder
-        step5TextView.isEditable = true
-        step5TextView.delegate = self
-        step5TextView.textColor = UIColor(red: 0.48, green: 0.49, blue: 0.53, alpha: 1)
-        step5TextView.translatesAutoresizingMaskIntoConstraints = false
-        step5TextView.textContainerInset = UIEdgeInsets(top: 32, left: 40, bottom: 32, right: 40)
-        step5TextView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-        step5TextView.font = UIFont(name: "Ubuntu-Regular", size: 14)
-        view.insertSubview(step5TextView, at: 0)
+        PostStep5AdopterViewController.step5TextView.clipsToBounds = true
+        PostStep5AdopterViewController.step5TextView.layer.cornerRadius = 30
+        PostStep5AdopterViewController.step5TextView.layer.borderColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1).cgColor
+        PostStep5AdopterViewController.step5TextView.layer.borderWidth = 3
+        PostStep5AdopterViewController.step5TextView.text = placeholder
+        PostStep5AdopterViewController.step5TextView.isEditable = true
+        PostStep5AdopterViewController.step5TextView.delegate = self
+        PostStep5AdopterViewController.step5TextView.textColor = UIColor(red: 0.48, green: 0.49, blue: 0.53, alpha: 1)
+        PostStep5AdopterViewController.step5TextView.translatesAutoresizingMaskIntoConstraints = false
+        PostStep5AdopterViewController.step5TextView.textContainerInset = UIEdgeInsets(top: 32, left: 40, bottom: 32, right: 40)
+        PostStep5AdopterViewController.step5TextView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        PostStep5AdopterViewController.step5TextView.font = UIFont(name: "Ubuntu-Regular", size: 14)
+        view.insertSubview(PostStep5AdopterViewController.step5TextView, at: 0)
         
         //award switch
         yesNoAwardswitch.translatesAutoresizingMaskIntoConstraints = false
@@ -156,11 +156,11 @@ class PostStep5AdopterViewController: UIViewController {
         yesNoAwardswitch.addTarget(self, action: #selector(switchAwardButton), for: .touchUpInside)
        
         //yes label
-        yesAwardLabel.text = "Yes"
-        yesAwardLabel.textColor = .white
-        yesAwardLabel.translatesAutoresizingMaskIntoConstraints = false
-        yesAwardLabel.font = UIFont(name: "Ubuntu-Regular", size: 14)
-        view.insertSubview(yesAwardLabel, at: 1)
+        PostStep5AdopterViewController.yesAwardLabel.text = "Yes"
+        PostStep5AdopterViewController.yesAwardLabel.textColor = .white
+        PostStep5AdopterViewController.yesAwardLabel.translatesAutoresizingMaskIntoConstraints = false
+        PostStep5AdopterViewController.yesAwardLabel.font = UIFont(name: "Ubuntu-Regular", size: 14)
+        view.insertSubview(PostStep5AdopterViewController.yesAwardLabel, at: 1)
         
         //no label
         noAwardLabel.text = "No"
@@ -175,22 +175,22 @@ class PostStep5AdopterViewController: UIViewController {
     
     @objc private func switchFoodButton(){
         if yesNoFoodswitch.isOn{
-            yesFoodLabel.textColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1)
+            PostStep5AdopterViewController.yesFoodLabel.textColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1)
             noFoodLabel.textColor = .white
         }
         else{
-            yesFoodLabel.textColor = .white
+            PostStep5AdopterViewController.yesFoodLabel.textColor = .white
             noFoodLabel.textColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1)
         }
     }
     
     @objc private func switchAwardButton(){
         if yesNoAwardswitch.isOn{
-            yesAwardLabel.textColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1)
+            PostStep5AdopterViewController.yesAwardLabel.textColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1)
             noAwardLabel.textColor = .white
         }
         else{
-            yesAwardLabel.textColor = .white
+            PostStep5AdopterViewController.yesAwardLabel.textColor = .white
             noAwardLabel.textColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1)
         }
     }
@@ -243,18 +243,18 @@ class PostStep5AdopterViewController: UIViewController {
             yesNoFoodswitch.heightAnchor.constraint(equalToConstant: 30),
             
             //yeslabel
-            yesFoodLabel.leadingAnchor.constraint(equalTo: yesNoFoodswitch.leadingAnchor,constant: 15),
-            yesFoodLabel.centerYAnchor.constraint(equalTo: yesNoFoodswitch.centerYAnchor),
+            PostStep5AdopterViewController.yesFoodLabel.leadingAnchor.constraint(equalTo: yesNoFoodswitch.leadingAnchor,constant: 15),
+            PostStep5AdopterViewController.yesFoodLabel.centerYAnchor.constraint(equalTo: yesNoFoodswitch.centerYAnchor),
             
             //nolabel
             noFoodLabel.trailingAnchor.constraint(equalTo: yesNoFoodswitch.trailingAnchor,constant: -15),
             noFoodLabel.centerYAnchor.constraint(equalTo: yesNoFoodswitch.centerYAnchor),
             
             //step 4 textview
-            step5TextView.widthAnchor.constraint(equalToConstant: 340),
-            step5TextView.heightAnchor.constraint(equalToConstant: 262),
-            step5TextView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            step5TextView.topAnchor.constraint(equalTo: foodLabel.bottomAnchor,constant: 28),
+            PostStep5AdopterViewController.step5TextView.widthAnchor.constraint(equalToConstant: 340),
+            PostStep5AdopterViewController.step5TextView.heightAnchor.constraint(equalToConstant: 262),
+            PostStep5AdopterViewController.step5TextView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            PostStep5AdopterViewController.step5TextView.topAnchor.constraint(equalTo: foodLabel.bottomAnchor,constant: 28),
             
             //award label
             awardLabel.topAnchor.constraint(equalTo: foodLabel.bottomAnchor,constant: 318),
@@ -267,8 +267,8 @@ class PostStep5AdopterViewController: UIViewController {
             yesNoAwardswitch.heightAnchor.constraint(equalToConstant: 30),
             
             //yeslabel
-            yesAwardLabel.leadingAnchor.constraint(equalTo: yesNoAwardswitch.leadingAnchor,constant: 15),
-            yesAwardLabel.centerYAnchor.constraint(equalTo: yesNoAwardswitch.centerYAnchor),
+            PostStep5AdopterViewController.yesAwardLabel.leadingAnchor.constraint(equalTo: yesNoAwardswitch.leadingAnchor,constant: 15),
+            PostStep5AdopterViewController.yesAwardLabel.centerYAnchor.constraint(equalTo: yesNoAwardswitch.centerYAnchor),
             
             //nolabel
             noAwardLabel.trailingAnchor.constraint(equalTo: yesNoAwardswitch.trailingAnchor,constant: -15),
@@ -280,16 +280,16 @@ class PostStep5AdopterViewController: UIViewController {
 
 extension PostStep5AdopterViewController: UITextViewDelegate{
     func textViewDidBeginEditing(_ textView: UITextView) {
-        if step5TextView.text == placeholder {
-            step5TextView.text = ""
-            step5TextView.textColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1)
+        if PostStep5AdopterViewController.step5TextView.text == placeholder {
+            PostStep5AdopterViewController.step5TextView.text = ""
+            PostStep5AdopterViewController.step5TextView.textColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1)
                 }
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
-        if step5TextView.text.isEmpty {
-           step5TextView.text = placeholder
-            step5TextView.textColor = UIColor(red: 0.48, green: 0.49, blue: 0.53, alpha: 1)
+        if PostStep5AdopterViewController.step5TextView.text.isEmpty {
+            PostStep5AdopterViewController.step5TextView.text = placeholder
+            PostStep5AdopterViewController.step5TextView.textColor = UIColor(red: 0.48, green: 0.49, blue: 0.53, alpha: 1)
         }
     }
     

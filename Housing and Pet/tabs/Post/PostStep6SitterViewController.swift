@@ -28,8 +28,8 @@ class PostStep6SitterViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         bigPic.backgroundColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 0.6)
-        bigPic.image = nil
-        bigPicLabel.setTitle("1/5", for: .normal)
+        bigPic.image = PostStep3AdopterViewController.bigPic.image
+        bigPicLabel.setTitle(PostStep3AdopterViewController.bigPicLabel.titleLabel?.text, for: .normal)
     }
     
     override func viewDidLoad() {
@@ -42,13 +42,14 @@ class PostStep6SitterViewController: UIViewController {
         //big pic
         imageArray = [UIImage(),UIImage(),UIImage(),UIImage(),UIImage()]
         bigPic.clipsToBounds = true
+        bigPic.image = PostStep3AdopterViewController.bigPic.image
         bigPic.backgroundColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 0.6)
         bigPic.translatesAutoresizingMaskIntoConstraints = false
         bigPic.layer.cornerRadius = 30
         view.insertSubview(bigPic, at: 0)
         
         //bigPic Label
-        bigPicLabel.setTitle("1/5", for: .normal)
+        bigPicLabel.setTitle(bigPicLabel.titleLabel?.text, for: .normal)
         bigPicLabel.titleLabel?.font = UIFont(name: "Ubuntu-Regular", size: 14)
         bigPicLabel.translatesAutoresizingMaskIntoConstraints = false
         bigPicLabel.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)

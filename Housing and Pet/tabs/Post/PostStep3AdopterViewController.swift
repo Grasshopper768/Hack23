@@ -14,8 +14,8 @@ class PostStep3AdopterViewController: UIViewController {
     let bottomLine = UIImageView()
     let cancelButton = UIButton()
     let nextButton = UIButton()
-    let bigPic = UIImageView()
-    let bigPicLabel = UIButton()
+    static let bigPic = UIImageView()
+    static let bigPicLabel = UIButton()
     let postPicCamera = UIButton()
     var imageArray = [UIImage]()
     let smallPic1 = UIButton()
@@ -27,10 +27,10 @@ class PostStep3AdopterViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        bigPic.backgroundColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 0.6)
-        bigPic.image = nil
+        PostStep3AdopterViewController.bigPic.backgroundColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 0.6)
+        PostStep3AdopterViewController.bigPic.image = nil
         imageArray = [UIImage(),UIImage(),UIImage(),UIImage(),UIImage()]
-        bigPicLabel.setTitle("1/5", for: .normal)
+        PostStep3AdopterViewController.bigPicLabel.setTitle("1/5", for: .normal)
         
         smallPic1.backgroundColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 0.6)
         smallPic2.backgroundColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 0.6)
@@ -115,21 +115,21 @@ class PostStep3AdopterViewController: UIViewController {
         
         //big pic
         imageArray = [UIImage(),UIImage(),UIImage(),UIImage(),UIImage()]
-        bigPic.clipsToBounds = true
-        bigPic.backgroundColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 0.6)
-        bigPic.translatesAutoresizingMaskIntoConstraints = false
-        bigPic.layer.cornerRadius = 30
-        view.insertSubview(bigPic, at: 0)
+        PostStep3AdopterViewController.bigPic.clipsToBounds = true
+        PostStep3AdopterViewController.bigPic.backgroundColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 0.6)
+        PostStep3AdopterViewController.bigPic.translatesAutoresizingMaskIntoConstraints = false
+        PostStep3AdopterViewController.bigPic.layer.cornerRadius = 30
+        view.insertSubview(PostStep3AdopterViewController.bigPic, at: 0)
         
         //bigPic Label
-        bigPicLabel.setTitle("1/5", for: .normal)
-        bigPicLabel.titleLabel?.font = UIFont(name: "Ubuntu-Regular", size: 14)
-        bigPicLabel.translatesAutoresizingMaskIntoConstraints = false
-        bigPicLabel.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
-        bigPicLabel.clipsToBounds = true
-        bigPicLabel.layer.cornerRadius = 15
-        bigPicLabel.layer.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
-        view.insertSubview(bigPicLabel, at: 1)
+        PostStep3AdopterViewController.bigPicLabel.setTitle("1/5", for: .normal)
+        PostStep3AdopterViewController.bigPicLabel.titleLabel?.font = UIFont(name: "Ubuntu-Regular", size: 14)
+        PostStep3AdopterViewController.bigPicLabel.translatesAutoresizingMaskIntoConstraints = false
+        PostStep3AdopterViewController.bigPicLabel.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+        PostStep3AdopterViewController.bigPicLabel.clipsToBounds = true
+        PostStep3AdopterViewController.bigPicLabel.layer.cornerRadius = 15
+        PostStep3AdopterViewController.bigPicLabel.layer.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        view.insertSubview(PostStep3AdopterViewController.bigPicLabel, at: 1)
         
         //camera button
         postPicCamera.setImage(UIImage(named: "postPicIcon"), for: .normal)
@@ -176,48 +176,48 @@ class PostStep3AdopterViewController: UIViewController {
     
     @objc private func smallPic1Click(){
         var temp = UIImage()
-        temp = bigPic.image ?? UIImage()
-        bigPic.image = smallPic1.currentImage
+        temp = PostStep3AdopterViewController.bigPic.image ?? UIImage()
+        PostStep3AdopterViewController.bigPic.image = smallPic1.currentImage
         smallPic1.setImage(temp, for: .normal)
         for (index,image) in self.imageArray.enumerated(){
-            if bigPic.image == image{
-                bigPicLabel.setTitle("\(index+1)/5", for: .normal)
+            if PostStep3AdopterViewController.bigPic.image == image{
+                PostStep3AdopterViewController.bigPicLabel.setTitle("\(index+1)/5", for: .normal)
             }
         }
     }
     
     @objc private func smallPic2Click(){
         var temp = UIImage()
-        temp = bigPic.image ?? UIImage()
-        bigPic.image = smallPic2.currentImage
+        temp = PostStep3AdopterViewController.bigPic.image ?? UIImage()
+        PostStep3AdopterViewController.bigPic.image = smallPic2.currentImage
         smallPic2.setImage(temp, for: .normal)
         for (index,image) in self.imageArray.enumerated(){
-            if bigPic.image == image{
-                bigPicLabel.setTitle("\(index+1)/5", for: .normal)
+            if PostStep3AdopterViewController.bigPic.image == image{
+                PostStep3AdopterViewController.bigPicLabel.setTitle("\(index+1)/5", for: .normal)
             }
         }
     }
 
     @objc private func smallPic3Click(){
         var temp = UIImage()
-        temp = bigPic.image ?? UIImage()
-        bigPic.image = smallPic3.currentImage
+        temp = PostStep3AdopterViewController.bigPic.image ?? UIImage()
+        PostStep3AdopterViewController.bigPic.image = smallPic3.currentImage
         smallPic3.setImage(temp, for: .normal)
         for (index,image) in self.imageArray.enumerated(){
-            if bigPic.image == image{
-                bigPicLabel.setTitle("\(index+1)/5", for: .normal)
+            if PostStep3AdopterViewController.bigPic.image == image{
+                PostStep3AdopterViewController.bigPicLabel.setTitle("\(index+1)/5", for: .normal)
             }
         }
     }
 
     @objc private func smallPic4Click(){
         var temp = UIImage()
-        temp = bigPic.image ?? UIImage()
-        bigPic.image = smallPic4.currentImage
+        temp = PostStep3AdopterViewController.bigPic.image ?? UIImage()
+        PostStep3AdopterViewController.bigPic.image = smallPic4.currentImage
         smallPic4.setImage(temp, for: .normal)
         for (index,image) in self.imageArray.enumerated(){
-            if bigPic.image == image{
-                bigPicLabel.setTitle("\(index+1)/5", for: .normal)
+            if PostStep3AdopterViewController.bigPic.image == image{
+                PostStep3AdopterViewController.bigPicLabel.setTitle("\(index+1)/5", for: .normal)
             }
         }
     }
@@ -273,43 +273,43 @@ class PostStep3AdopterViewController: UIViewController {
             nextButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -57),
             
             //big pic
-            bigPic.widthAnchor.constraint(equalToConstant: 342),
-            bigPic.heightAnchor.constraint(equalToConstant: 262),
-            bigPic.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            bigPic.topAnchor.constraint(equalTo: step3Label.bottomAnchor,constant: 64),
+            PostStep3AdopterViewController.bigPic.widthAnchor.constraint(equalToConstant: 342),
+            PostStep3AdopterViewController.bigPic.heightAnchor.constraint(equalToConstant: 262),
+            PostStep3AdopterViewController.bigPic.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            PostStep3AdopterViewController.bigPic.topAnchor.constraint(equalTo: step3Label.bottomAnchor,constant: 64),
             
             //big pic label
-            bigPicLabel.bottomAnchor.constraint(equalTo: bigPic.bottomAnchor,constant: -17),
-            bigPicLabel.trailingAnchor.constraint(equalTo: bigPic.trailingAnchor,constant: -15),
-            bigPicLabel.widthAnchor.constraint(equalToConstant: 50),
-            bigPicLabel.heightAnchor.constraint(equalToConstant: 30),
+            PostStep3AdopterViewController.bigPicLabel.bottomAnchor.constraint(equalTo: PostStep3AdopterViewController.bigPic.bottomAnchor,constant: -17),
+            PostStep3AdopterViewController.bigPicLabel.trailingAnchor.constraint(equalTo: PostStep3AdopterViewController.bigPic.trailingAnchor,constant: -15),
+            PostStep3AdopterViewController.bigPicLabel.widthAnchor.constraint(equalToConstant: 50),
+            PostStep3AdopterViewController.bigPicLabel.heightAnchor.constraint(equalToConstant: 30),
             
             //camera button
-            postPicCamera.topAnchor.constraint(equalTo: bigPic.bottomAnchor,constant: 26),
+            postPicCamera.topAnchor.constraint(equalTo: PostStep3AdopterViewController.bigPic.bottomAnchor,constant: 26),
             postPicCamera.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 32),
             postPicCamera.heightAnchor.constraint(equalToConstant: 50),
             postPicCamera.widthAnchor.constraint(equalToConstant: 50),
             
             //small pic 1
-            smallPic1.topAnchor.constraint(equalTo: bigPic.bottomAnchor,constant: 20),
+            smallPic1.topAnchor.constraint(equalTo: PostStep3AdopterViewController.bigPic.bottomAnchor,constant: 20),
             smallPic1.leadingAnchor.constraint(equalTo: postPicCamera.trailingAnchor,constant: 12),
             smallPic1.widthAnchor.constraint(equalToConstant: 62),
             smallPic1.heightAnchor.constraint(equalToConstant: 62),
             
             //small pic 2
-            smallPic2.topAnchor.constraint(equalTo: bigPic.bottomAnchor,constant: 20),
+            smallPic2.topAnchor.constraint(equalTo: PostStep3AdopterViewController.bigPic.bottomAnchor,constant: 20),
             smallPic2.leadingAnchor.constraint(equalTo: smallPic1.trailingAnchor,constant: 6),
             smallPic2.widthAnchor.constraint(equalToConstant: 62),
             smallPic2.heightAnchor.constraint(equalToConstant: 62),
             
             //small pic 3
-            smallPic3.topAnchor.constraint(equalTo: bigPic.bottomAnchor,constant: 20),
+            smallPic3.topAnchor.constraint(equalTo: PostStep3AdopterViewController.bigPic.bottomAnchor,constant: 20),
             smallPic3.leadingAnchor.constraint(equalTo: smallPic2.trailingAnchor,constant: 6),
             smallPic3.widthAnchor.constraint(equalToConstant: 62),
             smallPic3.heightAnchor.constraint(equalToConstant: 62),
             
             //small pic 4
-            smallPic4.topAnchor.constraint(equalTo: bigPic.bottomAnchor,constant: 20),
+            smallPic4.topAnchor.constraint(equalTo: PostStep3AdopterViewController.bigPic.bottomAnchor,constant: 20),
             smallPic4.leadingAnchor.constraint(equalTo: smallPic3.trailingAnchor,constant: 6),
             smallPic4.widthAnchor.constraint(equalToConstant: 62),
             smallPic4.heightAnchor.constraint(equalToConstant: 62),
@@ -329,7 +329,7 @@ extension PostStep3AdopterViewController: PHPickerViewControllerDelegate{
                         
                         DispatchQueue.main.async {
                             // Update the corresponding image view with the selected image
-                            self?.bigPic.image = self?.imageArray[0]
+                            PostStep3AdopterViewController.bigPic.image = self?.imageArray[0]
                             self?.smallPic1.setImage(self?.imageArray[1], for: .normal)
                             self?.smallPic2.setImage(self?.imageArray[2], for: .normal)
                             self?.smallPic3.setImage(self?.imageArray[3], for: .normal)

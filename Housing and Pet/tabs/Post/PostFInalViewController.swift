@@ -90,7 +90,9 @@ class CongratsViewController : UIViewController {
     }
     
     @objc func toHome() {
-        navigationController?.pushViewController(HomeViewController(), animated: true)
+        self.tabBarController?.selectedIndex = 0
+        self.tabBarController?.tabBar.isHidden = false
+        navigationController?.setViewControllers([PostViewController()], animated: true)
     }
     
     

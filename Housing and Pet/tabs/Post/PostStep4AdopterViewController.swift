@@ -13,7 +13,7 @@ class PostStep4AdopterViewController: UIViewController {
     let bottomLine = UIImageView()
     let cancelButton = UIButton()
     let nextButton = UIButton()
-    let step4TextView = UITextView()
+    static let step4TextView = UITextView()
     let placeholder = "Enter a brief description of your pet here (maximum 200 words)"
     let maxWords = 200
 
@@ -88,19 +88,19 @@ class PostStep4AdopterViewController: UIViewController {
         
         //step 4 textview
         
-        step4TextView.clipsToBounds = true
-        step4TextView.layer.cornerRadius = 30
-        step4TextView.layer.borderColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1).cgColor
-        step4TextView.layer.borderWidth = 3
-        step4TextView.text = placeholder
-        step4TextView.isEditable = true
-        step4TextView.delegate = self
-        step4TextView.textColor = UIColor(red: 0.48, green: 0.49, blue: 0.53, alpha: 1)
-        step4TextView.translatesAutoresizingMaskIntoConstraints = false
-        step4TextView.textContainerInset = UIEdgeInsets(top: 32, left: 40, bottom: 32, right: 40)
-        step4TextView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-        step4TextView.font = UIFont(name: "Ubuntu-Regular", size: 14)
-        view.insertSubview(step4TextView, at: 0)
+        PostStep4AdopterViewController.step4TextView.clipsToBounds = true
+        PostStep4AdopterViewController.step4TextView.layer.cornerRadius = 30
+        PostStep4AdopterViewController.step4TextView.layer.borderColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1).cgColor
+        PostStep4AdopterViewController.step4TextView.layer.borderWidth = 3
+        PostStep4AdopterViewController.step4TextView.text = placeholder
+        PostStep4AdopterViewController.step4TextView.isEditable = true
+        PostStep4AdopterViewController.step4TextView.delegate = self
+        PostStep4AdopterViewController.step4TextView.textColor = UIColor(red: 0.48, green: 0.49, blue: 0.53, alpha: 1)
+        PostStep4AdopterViewController.step4TextView.translatesAutoresizingMaskIntoConstraints = false
+        PostStep4AdopterViewController.step4TextView.textContainerInset = UIEdgeInsets(top: 32, left: 40, bottom: 32, right: 40)
+        PostStep4AdopterViewController.step4TextView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        PostStep4AdopterViewController.step4TextView.font = UIFont(name: "Ubuntu-Regular", size: 14)
+        view.insertSubview(PostStep4AdopterViewController.step4TextView, at: 0)
         
         setCons()
     }
@@ -142,10 +142,10 @@ class PostStep4AdopterViewController: UIViewController {
             nextButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -57),
             
             //step 4 textview
-            step4TextView.widthAnchor.constraint(equalToConstant: 340),
-            step4TextView.heightAnchor.constraint(equalToConstant: 262),
-            step4TextView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            step4TextView.topAnchor.constraint(equalTo: step4Label.bottomAnchor,constant: 64),
+            PostStep4AdopterViewController.step4TextView.widthAnchor.constraint(equalToConstant: 340),
+            PostStep4AdopterViewController.step4TextView.heightAnchor.constraint(equalToConstant: 262),
+            PostStep4AdopterViewController.step4TextView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            PostStep4AdopterViewController.step4TextView.topAnchor.constraint(equalTo: step4Label.bottomAnchor,constant: 64),
         ])
     }
 
@@ -153,16 +153,16 @@ class PostStep4AdopterViewController: UIViewController {
 
 extension PostStep4AdopterViewController: UITextViewDelegate{
     func textViewDidBeginEditing(_ textView: UITextView) {
-        if step4TextView.text == placeholder {
-            step4TextView.text = ""
-            step4TextView.textColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1)
+        if PostStep4AdopterViewController.step4TextView.text == placeholder {
+            PostStep4AdopterViewController.step4TextView.text = ""
+            PostStep4AdopterViewController.step4TextView.textColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1)
                 }
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
-        if step4TextView.text.isEmpty {
-           step4TextView.text = placeholder
-            step4TextView.textColor = UIColor(red: 0.48, green: 0.49, blue: 0.53, alpha: 1)
+        if PostStep4AdopterViewController.step4TextView.text.isEmpty {
+            PostStep4AdopterViewController.step4TextView.text = placeholder
+            PostStep4AdopterViewController.step4TextView.textColor = UIColor(red: 0.48, green: 0.49, blue: 0.53, alpha: 1)
         }
     }
     

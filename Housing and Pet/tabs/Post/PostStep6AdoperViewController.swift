@@ -28,8 +28,8 @@ class PostStep6AdoperViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         bigPic.backgroundColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 0.6)
-        bigPic.image = nil
-        bigPicLabel.setTitle("1/5", for: .normal)
+        bigPic.image = PostStep3AdopterViewController.bigPic.image
+        bigPicLabel.setTitle(PostStep3AdopterViewController.bigPicLabel.titleLabel?.text, for: .normal)
     }
     
     override func viewDidLoad() {
@@ -48,7 +48,6 @@ class PostStep6AdoperViewController: UIViewController {
         view.insertSubview(bigPic, at: 0)
         
         //bigPic Label
-        bigPicLabel.setTitle("1/5", for: .normal)
         bigPicLabel.titleLabel?.font = UIFont(name: "Ubuntu-Regular", size: 14)
         bigPicLabel.translatesAutoresizingMaskIntoConstraints = false
         bigPicLabel.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
@@ -71,7 +70,7 @@ class PostStep6AdoperViewController: UIViewController {
         view.insertSubview(cancelButton, at: 1)
         
         //next button
-        let nextButtonTitle = "Next"
+        let nextButtonTitle = "Submit"
         let strokeTextAttributes: [NSAttributedString.Key: Any] = [
             .strokeColor: UIColor.white,
             .foregroundColor: UIColor.white,
@@ -90,21 +89,21 @@ class PostStep6AdoperViewController: UIViewController {
         view.insertSubview(nextButton, at: 1)
         
         //pet name
-        PetName.text = "Name"
+        PetName.text = PostStep2AdopterViewController.nameField.text!
         PetName.textColor = UIColor(red: 0.12, green: 0.12, blue: 0.123, alpha: 1)
         PetName.font = UIFont(name: "Ubuntu-Medium", size: 30)
         PetName.translatesAutoresizingMaskIntoConstraints = false
         view.insertSubview(PetName, at: 0)
         
         //set up age and gender
-        ageAndGender.text = "Age: Age | Gender"
+        ageAndGender.text = "Age: \(PostStep2AdopterViewController.ageField.text!) | \(PostStep2AdopterViewController.genderField.text!)"
         ageAndGender.textColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1)
         ageAndGender.font = UIFont(name: "Ubuntu-Regular", size: 18)
         ageAndGender.translatesAutoresizingMaskIntoConstraints = false
         view.insertSubview(ageAndGender, at: 0)
         
         //set up category and breed
-        catAndBred.text = "Category | Breed"
+        catAndBred.text = "\(PostStep2AdopterViewController.categoryField.text!) | \(PostStep2AdopterViewController.breedField.text!)"
         catAndBred.textColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1)
         catAndBred.font = UIFont(name: "Ubuntu-Regular", size: 18)
         catAndBred.translatesAutoresizingMaskIntoConstraints = false
@@ -116,7 +115,19 @@ class PostStep6AdoperViewController: UIViewController {
         view.insertSubview(mapPic, at: 0)
         
         //location
-        location.text = "######"
+        
+        if PostStep2AdopterViewController.onCampusButton.backgroundColor == UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1){
+            location.text = "On-Campus"
+        }
+        
+        if PostStep2AdopterViewController.offCampusButton.backgroundColor == UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1){
+            location.text = "Off-Campus | Ithaca "
+        }
+        
+        if PostStep2AdopterViewController.outsideIthacaButton.backgroundColor == UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1){
+            location.text = "Outside Ithaca"
+        }
+        
         location.font = UIFont(name: "Ubuntu-Regular", size: 18)
         location.textColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1)
         location.translatesAutoresizingMaskIntoConstraints = false
@@ -128,14 +139,14 @@ class PostStep6AdoperViewController: UIViewController {
         view.insertSubview(calPic, at: 0)
         
         //time
-        time.text = "Need an adopter by ##/####"
+        time.text = "Need an adopter by \(PostStep2AdopterViewController.durationEndField.text!)"
         time.font = UIFont(name: "Ubuntu-Regular", size: 18)
         time.textColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1)
         time.translatesAutoresizingMaskIntoConstraints = false
         view.insertSubview(time, at: 0)
         
         //info textview
-        infoTextView.text = "xxx xxxx xxx xxx\nxxx\nxxxxx"
+        infoTextView.text = PostStep4AdopterViewController.step4TextView.text!
         infoTextView.isEditable = false
         infoTextView.translatesAutoresizingMaskIntoConstraints = false
         infoTextView.textColor = UIColor(red: 0.12, green: 0.12, blue: 0.13, alpha: 1)
